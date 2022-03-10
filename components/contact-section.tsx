@@ -4,11 +4,11 @@ import { EmailOutlined, LinkedIn, WhatsAppOutlined } from './custom-icons'
 
 function ContactSection() {
   return (
-    <Box component="section" sx={({ palette: { common: { black, white } } }) => ({
-      bgcolor: black,
+    <Box component="section" sx={({ palette: { primary: { main, contrastText } } }) => ({
+      bgcolor: main,
       pt: 6,
       pb: 8,
-      color: white,
+      color: contrastText,
     })}>
       <h2 hidden>Contact</h2>
       <Container>

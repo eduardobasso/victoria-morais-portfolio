@@ -13,6 +13,7 @@ const theme: ThemeOptions = {
       main: '#f55d2f',
       light: '#ff8f5c',
       dark: '#bb2800',
+      contrastText: '#fff',
     },
     text: {
       primary: '#242424',

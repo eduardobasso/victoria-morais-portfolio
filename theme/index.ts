@@ -10,9 +10,16 @@ const theme: ThemeOptions = {
       white: '#fff',
     },
     primary: {
-      main: '#1a1b1f',
-      light: '#404246',
+      main: '#242424',
+      light: '#4c4c4c',
       dark: '#010101',
+      contrastText: '#fff',
+    },
+    secondary: {
+      main: '#700bd5',
+      light: '#a74aff',
+      dark: '#3400a2',
+      contrastText: '#fff',
     },
     text: {
       primary: '#1a1b1f',

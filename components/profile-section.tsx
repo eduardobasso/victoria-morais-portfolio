@@ -2,11 +2,11 @@ import { Avatar, Box, Container, Grid, Stack, Typography } from '@mui/material'
 
 function ProfileSection() {
   return (
-    <Box component="section" sx={({ palette: { common: { black, white } } }) => ({
-      bgcolor: black,
+    <Box component="section" sx={({ palette: { primary: { main, contrastText } } }) => ({
+      bgcolor: main,
       pt: 6,
       pb: 8,
-      color: white,
+      color: contrastText,
     })}>
       <h2 hidden>Profile</h2>
       <Container>
@@ -14,7 +14,7 @@ function ProfileSection() {
           <Grid item xs={12} sm={7} lg={6}>
             <Stack spacing={3} height="100%">
               <Stack flexGrow={1} justifyContent="center">
-                <Typography variant="h3" fontWeight={700} mb={.75}>Hello! 🤘🏻</Typography>
+                <Typography variant="h3" fontWeight={700} mb={.75}>Hello!&nbsp;🤘🏻</Typography>
                 <Typography variant="h3" fontWeight={700} mb={3}>I&apos;m Victoria Morais</Typography>
                 <Typography variant="body1" fontWeight={300} mb={2.25}>A designer with UX/UI and product skills with more than 3 years of experience in industry, education and e-commerce. I&apos;m currently working at Whirlpool and my objective is to contribute with my knowledge and skills to deliver the best solution for business and people needs.</Typography>
                 <Grid container spacing={3}>

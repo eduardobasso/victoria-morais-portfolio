@@ -16,7 +16,7 @@ function WorkSection() {
             imgSrc="/images/projects/brastemp-experience/thumb.png"
             imgAlt="Brastemp cover"
             imgPos="right"
-            route="/work/brastemp-experience"
+            route="/"
           />
           <ProjectCard
             company="Validation concept"
