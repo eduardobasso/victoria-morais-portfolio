@@ -32,11 +32,11 @@ function WorkSection() {
             company="Gama Academy"
             title="Skill Assessment"
             description="An auto evaluation service to understand the student's profile and offer the best solution: a preparatory study content, Experience program or Learning path."
-            role="Product Designer"
-            imgSrc="/images/projects/skill-assessment/cover.png"
+            role="UX/UI Designer"
+            imgSrc="/images/projects/skill-assessment/thumb.png"
             imgAlt="Skill Assessment cover"
             imgPos="right"
-            route="/"
+            route="/work/skill-assessment"
           />
         </Stack>
       </Container>
