@@ -8,6 +8,13 @@ type Props = {
 }
 
 function ContentNavbar({ items }: Props) {
+  const scrollToAnchor = (anchorId: string) => {
+    const anchor = document.getElementById(anchorId);
+    if (anchor) anchor.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <Box component="nav" sx={{
       display: 'flex',
@@ -16,12 +23,12 @@ function ContentNavbar({ items }: Props) {
       pt: 8,
       pb: 9,
     }}>
-      {items.map((item, index) => (
-        <Link key={index} color="primary" typography="body1" sx={{
+      {items.map((item) => (
+        <Link component="button" key={item.anchorId} color="primary" typography="body1" sx={{
           mr: 2,
           ml: 2,
           fontWeight: 500,
-        }} href={`#${item.anchorId}`}>{item.label}</Link>
+        }} underline="hover" onClick={() => scrollToAnchor(item.anchorId)}>{item.label}</Link>
       ))}
     </Box>
   )

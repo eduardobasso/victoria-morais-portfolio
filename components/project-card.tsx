@@ -29,7 +29,7 @@ function ProjectCard({ company, title, description, role, imgSrc, imgAlt, imgPos
         mx: -2,
       },
     })}>
-      <CardActionArea sx={(theme) => ({
+      <CardActionArea component="div" sx={(theme) => ({
         [theme.breakpoints.up('md')]: {
           display: 'flex',
           flexDirection: (imgPos === 'right') ? 'row' : 'row-reverse',
