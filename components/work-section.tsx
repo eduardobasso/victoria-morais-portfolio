@@ -36,7 +36,7 @@ function WorkSection() {
             imgSrc="/images/projects/skill-assessment/thumb.png"
             imgAlt="Skill Assessment cover"
             imgPos="right"
-            route="/work/skill-assessment"
+            route="/"
           />
         </Stack>
       </Container>
