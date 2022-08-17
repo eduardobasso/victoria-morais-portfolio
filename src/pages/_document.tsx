@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="description" content="Portfolio containing Victoria Morais' work as a Designer." />
-        <meta name="tags" content="Portfolio, UX Design, UI Design, Product Design, UX Research" />
+        <meta name="description" content={`Portfolio containing Victoria Morais' work as a Designer.`} />
+        <meta name="tags" content={`Portfolio, UX Design, UI Design, Product Design, UX Research`} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

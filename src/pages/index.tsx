@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <PageWrapper>
       <ProfileSection />
-      <InnerHeading text="My work" />
+      <InnerHeading text={`My work`} />
       <WorkSection />
     </PageWrapper>
   )

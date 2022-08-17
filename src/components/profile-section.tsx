@@ -25,7 +25,7 @@ function ProfileSection() {
                   {`I'm Victoria Morais`}
                 </Typography>
                 <Typography variant="body1" fontWeight={300} mb={2.25}>
-                  {`A Designer with UX/UI and Product skills with more than 3 years of experience in industry, education and e-commerce. I'm currently working at Hyphen and my objective is to contribute with my knowledge and skills to deliver the best solution for business and people's needs.`}
+                  {`A Designer with UX/UI and Product Design skills with more than 4 years of experience in industry, education and e-commerce. I'm currently working at Hyphen and my objective is to contribute with my knowledge and skills to deliver the best solution for business and people's needs.`}
                 </Typography>
                 <Grid container spacing={4}>
                   <Grid item xs={12} sm="auto">

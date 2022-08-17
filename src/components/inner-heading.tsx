@@ -11,7 +11,7 @@ function InnerHeading({ text }: InnerHeadingProps) {
       <Box color="common.black">
         <Container>
           <Box display="flex" alignItems="flex-end" gap={3}>
-            <Typography component="p" variant="h3" fontSize={34} fontWeight={700}>
+            <Typography component="p" variant="h3" fontSize={34} fontWeight={400}>
               {text}
             </Typography>
             <PandaFace sx={{ fontSize: 46 }} />
@@ -30,7 +30,7 @@ function InnerHeading({ text }: InnerHeadingProps) {
       }} aria-hidden="true">
         <Container>
           <Box display="flex" alignItems="flex-end" gap={3}>
-            <Typography component="p" variant="h3" fontSize={34} fontWeight={700}>
+            <Typography component="p" variant="h3" fontSize={34} fontWeight={400}>
               {text}
             </Typography>
             <PandaFace sx={{ fontSize: 46 }} />

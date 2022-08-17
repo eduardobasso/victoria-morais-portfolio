@@ -24,7 +24,9 @@ function ScrollTopButton() {
           height: 64,
         }} id="btnScrollTop" onClick={scrollTop}>
           <DoubleArrowUp />
-          <Typography component="span" variant="caption" textTransform="lowercase">To top</Typography>
+          <Typography component="span" variant="caption" textTransform="lowercase">
+            {`To top`}
+          </Typography>
         </Fab>
       </Box>
     </Zoom>

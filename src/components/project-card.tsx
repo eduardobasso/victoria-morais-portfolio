@@ -63,10 +63,18 @@ function ProjectCard({ company, title, description, role, imgSrc, imgAlt, imgPos
             pl: (imgPos === 'left') ? 19.5 : 0,
           },
         })}>
-          <Typography variant="overline" color="text.secondary" fontWeight={500}>{company}</Typography>
-          <Typography variant="h4" fontWeight={500} mb={3}>{title}</Typography>
-          <Typography variant="body1" fontWeight={300} mb={1.5}>{description}</Typography>
-          <Typography variant="body2" fontWeight={500}>My role: {role}</Typography>
+          <Typography variant="overline" color="text.secondary" fontWeight={500}>
+            {company}
+          </Typography>
+          <Typography variant="h4" fontWeight={500} mb={3}>
+            {title}
+          </Typography>
+          <Typography variant="body1" fontWeight={300} mb={1.5}>
+            {description}
+          </Typography>
+          <Typography variant="body2" fontWeight={500}>
+            {`My role: ${role}`}
+          </Typography>
         </CardContent>
         <CardMedia component="img" sx={(theme) => ({
           width: '100%',

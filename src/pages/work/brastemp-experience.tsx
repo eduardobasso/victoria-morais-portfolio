@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
+import { Box, Container, Grid, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 
 import PageWrapper from '../../components/page-wrapper'
@@ -117,7 +117,7 @@ const BrastempExperience: NextPage = () => {
                   </Paper>
                 </Grid>
               </Grid>
-              <Box component="article" my={6}>
+              <Box my={6}>
                 <Grid container spacing={6} alignItems="stretch">
                   <Grid item xs={12} md={6}>
                     <Paper elevation={0} variant="outlined" sx={(theme) => ({
@@ -171,208 +171,264 @@ const BrastempExperience: NextPage = () => {
                   </Grid>
                 </Grid>
               </Box>
-            </Box>
-            <Box component="article" my={6}>
-              <Grid container spacing={6}>
-                <Grid item xs={12} md={6}>
-                  <Stack spacing={2}>
-                    <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
-                      Analytics
-                    </Typography>
-                    <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                      In this moment I searched the information based on CSD matrix to validate all de certainties presented. The challenged was to sorting throught the data and made meaningfull informations  about the supositions and doubts to do the survey.
-                    </Typography>
-                  </Stack>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <Paper elevation={0} sx={(theme) => ({
-                    borderRadius: 0,
-                    py: 6,
-                    px: 4,
-                    textAlign: 'center',
-                  })}>
-                    <Stack spacing={1}>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        +60% of organic acess
-                      </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        3th page with more visits per month
-                      </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        16% of total online services representation
-                      </Typography>
-                    </Stack>
-                  </Paper>
-                </Grid>
-              </Grid>
-            </Box>
-            <Box component="article" my={6}>
-              <Grid container spacing={6}>
-                <Grid item xs={12} md={6}>
-                  <Stack spacing={2}>
-                    <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
-                      Hotjar surveys and clarity heatmaps
-                    </Typography>
-                    <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                      I used heatmaps to understand the user&apos;s interaction on the site and their engajament and identified areas of opportunity in the web page.
-                    </Typography>
-                    <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                      The survey was made to discovered the principal questions about the user when them interact with the page.
-                    </Typography>
-                  </Stack>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <Paper elevation={0} sx={{
-                    borderRadius: 0,
-                    pt: 3,
-                    pb: 1,
-                    px: 1,
-                    textAlign: 'center',
-                  }}>
-                    <Box component="figure">
-                      <Box component="img" src="/images/projects/brastemp-experience/heatmap.png" alt="Clarity heatmap" sx={{
-                        width: '100%',
-                        maxWidth: 256,
-                        height: 'auto',
-                        maxHeight: 188,
-                        mb: 1,
-                      }} />
-                      <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                        Clarity heatmap.
-                      </Typography>
-                    </Box>
-                  </Paper>
-                </Grid>
-              </Grid>
-            </Box>
-            <Box my={6}>
-              <Grid container spacing={6}>
-                <Grid item xs={12} md={7}>
-                  <Paper elevation={0} sx={(theme) => ({
-                    borderRadius: 0,
-                    py: 4,
-                    px: 2,
-                    textAlign: 'center',
-                  })}>
+              <Box component="article" my={6}>
+                <Grid container spacing={6}>
+                  <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={500}>
-                        What&apos;s the channel preference for looking information?
+                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                        {`Analytics`}
                       </Typography>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center">
-                        <Typography component="span" variant="h4" color="primary" fontWeight={600} pr={1.5}>
-                          58%
-                        </Typography>
-                        <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
-                          Prefer chat or WhatsApp
-                        </Typography>
-                      </Box>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center">
-                        <Typography component="span" variant="h4" color="primary" fontWeight={600} pr={1.5}>
-                          45-54
-                        </Typography>
-                        <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
-                          This age uses WhatsApp
-                        </Typography>
-                      </Box>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center">
-                        <Typography component="span" variant="h4" color="primary" fontWeight={600} pr={1.5}>
-                          +55
-                        </Typography>
-                        <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
-                          Use telephone only
-                        </Typography>
-                      </Box>
+                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                        {`At that moment, I searched for the information based on the CSD matrix to validate all the certainties presented. The challenge was to sort through the data and make meaningful information about the suppositions and doubts to do the survey.`}
+                      </Typography>
                     </Stack>
-                  </Paper>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Paper elevation={0} sx={(theme) => ({
+                      borderRadius: 0,
+                      py: 6,
+                      px: 4,
+                      textAlign: 'center',
+                    })}>
+                      <Stack spacing={1}>
+                        <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                          {`+60% of organic access`}
+                        </Typography>
+                        <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                          {`3rd page with more visits per month`}
+                        </Typography>
+                        <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                          {`16% of all online services representation`}
+                        </Typography>
+                      </Stack>
+                    </Paper>
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} md={5}>
-                  <Paper elevation={0} sx={(theme) => ({
-                    borderRadius: 0,
-                    py: 4,
-                    px: 2,
-                    textAlign: 'center',
-                  })}>
+              </Box>
+              <Box component="article" my={6}>
+                <Grid container spacing={6}>
+                  <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={500}>
-                        What do they need for this service?
+                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                        {`Hotjar surveys and clarity heatmaps`}
                       </Typography>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center">
-                        <Typography component="span" variant="h4" color="primary" fontWeight={600} pr={1.5}>
-                          28%
-                        </Typography>
-                        <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
-                          Information about service
-                        </Typography>
-                      </Box>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center">
-                        <Typography component="span" variant="h4" color="primary" fontWeight={600} pr={1.5}>
-                          33%
-                        </Typography>
-                        <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
-                          Wants to schedule a visit
-                        </Typography>
-                      </Box>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center">
-                        <Typography component="span" variant="h4" color="primary" fontWeight={600} pr={1.5}>
-                          32%
-                        </Typography>
-                        <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
-                          Technical telephone
-                        </Typography>
-                      </Box>
+                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                        {`I used heatmaps to understand the users' interaction on the site and their engagement and identified areas of opportunity in the web page.`}
+                      </Typography>
+                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                        {`The survey was made to discover the principal questions about the user's interaction with the page.`}
+                      </Typography>
                     </Stack>
-                  </Paper>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Paper elevation={0} sx={{
+                      borderRadius: 0,
+                      pt: 3,
+                      pb: 1,
+                      px: 1,
+                      textAlign: 'center',
+                    }}>
+                      <Box component="figure">
+                        <Box component="img" src="/images/projects/brastemp-experience/heatmap.png" alt="Clarity heatmap" sx={{
+                          width: '100%',
+                          maxWidth: 256,
+                          height: 'auto',
+                          maxHeight: 188,
+                          mb: 1,
+                        }} />
+                        <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
+                          {`The Clarity heatmap.`}
+                        </Typography>
+                      </Box>
+                    </Paper>
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Box>
-            <Box component="article" mt={6} mb={10}>
-              <Grid container spacing={6}>
-                <Grid item xs={12} md={6}>
-                  <Stack spacing={2}>
-                    <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
-                      Benchmark: how is the competition?
-                    </Typography>
-                    <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                      This stage I focused to analyze four strategic topics: access (which ways their users access the service?), service&apos;s features (what users can do in the service?), usability and security (How much difficulty is it to use the service?).
-                    </Typography>
-                  </Stack>
+              </Box>
+              <Box my={6}>
+                <Grid container spacing={6}>
+                  <Grid item xs={12} md={7}>
+                    <Paper elevation={0} sx={(theme) => ({
+                      borderRadius: 0,
+                      py: 4,
+                      px: 2,
+                      textAlign: 'center',
+                    })}>
+                      <Stack spacing={2}>
+                        <Typography component="h6" variant="body1" color="text.secondary" fontWeight={500}>
+                          {`What's the channel preference for looking for information?`}
+                        </Typography>
+                        <Box component="p" display="flex" alignItems="center" justifyContent="center">
+                          <TableContainer sx={{ width: 'auto' }}>
+                            <Table sx={{ width: 'auto' }}>
+                              <TableBody>
+                                <TableRow>
+                                  <TableCell sx={{ maxWidth: 108, py: 1, px: .75, textAlign: 'center' }}>
+                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                                      {`58%`}
+                                    </Typography>
+                                  </TableCell>
+                                  <TableCell sx={{ py: 1, px: .75 }}>
+                                    <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
+                                      {`prefer chat or WhatsApp`}
+                                    </Typography>
+                                  </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                  <TableCell sx={{ maxWidth: 108, py: 1, px: .75, textAlign: 'center' }}>
+                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                                      {`45-54`}
+                                    </Typography>
+                                  </TableCell>
+                                  <TableCell sx={{ py: 1, px: .75 }}>
+                                    <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
+                                      {`year olds use WhatsApp`}
+                                    </Typography>
+                                  </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                  <TableCell sx={{ maxWidth: 108, py: 1, px: .75, textAlign: 'center' }}>
+                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                                      {`55+`}
+                                    </Typography>
+                                  </TableCell>
+                                  <TableCell sx={{ py: 1, px: .75 }}>
+                                    <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
+                                      {`only use the telephone`}
+                                    </Typography>
+                                  </TableCell>
+                                </TableRow>
+                              </TableBody>
+                            </Table>
+                          </TableContainer>
+                        </Box>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+                  <Grid item xs={12} md={5}>
+                    <Paper elevation={0} sx={(theme) => ({
+                      borderRadius: 0,
+                      py: 4,
+                      px: 2,
+                      textAlign: 'center',
+                    })}>
+                      <Stack spacing={2}>
+                        <Typography component="h6" variant="body1" color="text.secondary" fontWeight={500}>
+                          {`What do they need for this service?`}
+                        </Typography>
+                        <Box component="p" display="flex" alignItems="center" justifyContent="center">
+                          <TableContainer sx={{ width: 'auto' }}>
+                            <Table sx={{ width: 'auto' }}>
+                              <TableBody>
+                                <TableRow>
+                                  <TableCell sx={{ maxWidth: 80, py: 1, px: .75, textAlign: 'center' }}>
+                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                                      {`28%`}
+                                    </Typography>
+                                  </TableCell>
+                                  <TableCell sx={{ py: 1, px: .75 }}>
+                                    <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
+                                      {`information about the service`}
+                                    </Typography>
+                                  </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                  <TableCell sx={{ maxWidth: 80, py: 1, px: .75, textAlign: 'center' }}>
+                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                                      {`33%`}
+                                    </Typography>
+                                  </TableCell>
+                                  <TableCell sx={{ py: 1, px: .75 }}>
+                                    <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
+                                      {`want to schedule a visit`}
+                                    </Typography>
+                                  </TableCell>
+                                </TableRow>
+                                <TableRow>
+                                  <TableCell sx={{ maxWidth: 80, py: 1, px: .75, textAlign: 'center' }}>
+                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                                      {`32%`}
+                                    </Typography>
+                                  </TableCell>
+                                  <TableCell sx={{ py: 1, px: .75 }}>
+                                    <Typography component="span" variant="body1" color="text.secondary" fontWeight={300}>
+                                      {`speak to a technician by phone`}
+                                    </Typography>
+                                  </TableCell>
+                                </TableRow>
+                              </TableBody>
+                            </Table>
+                          </TableContainer>
+                        </Box>
+                      </Stack>
+                    </Paper>
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <Paper elevation={0} sx={{
-                    borderRadius: 0,
-                    pt: 3,
-                    pb: 1,
-                    px: 1,
-                    textAlign: 'center',
-                  }}>
-                    <Box component="figure">
-                      <Box component="img" src="/images/projects/brastemp-experience/benchmark.png" alt="Benchmarking analysis" sx={{
-                        width: '100%',
-                        maxWidth: 460,
-                        height: 'auto',
-                        maxHeight: 210,
-                        mb: 1,
-                      }} />
-                      <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                        Benchmarking analysis.
+              </Box>
+              <Box component="article" my={6}>
+                <Grid container spacing={6}>
+                  <Grid item xs={12} md={6}>
+                    <Stack spacing={2}>
+                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                        {`Benchmark: how is the competition?`}
                       </Typography>
-                    </Box>
-                  </Paper>
+                      <Stack spacing={2}>
+                        <Typography component="p" variant="body1" fontWeight={300}>
+                          {`At this stage, I focused on analyzing four strategic topics:`}
+                        </Typography>
+                        <Stack component="ol" spacing={1} pl={2.25}>
+                          <Typography component="li" variant="body1" fontWeight={300}>
+                            {`Access (which ways do their users access the service?)`}
+                          </Typography>
+                          <Typography component="li" variant="body1" fontWeight={300}>
+                            {`The service's features (what users can do in the service?)`}
+                          </Typography>
+                          <Typography component="li" variant="body1" fontWeight={300}>
+                            {`Usability`}
+                          </Typography>
+                          <Typography component="li" variant="body1" fontWeight={300}>
+                            {`Security (how much difficulty is it to use the service?)`}
+                          </Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Paper elevation={0} sx={{
+                      borderRadius: 0,
+                      pt: 3,
+                      pb: 1,
+                      px: 1,
+                      textAlign: 'center',
+                    }}>
+                      <Box component="figure">
+                        <Box component="img" src="/images/projects/brastemp-experience/benchmark.png" alt="Benchmarking analysis" sx={{
+                          width: '100%',
+                          maxWidth: 460,
+                          height: 'auto',
+                          maxHeight: 210,
+                          mb: 1,
+                        }} />
+                        <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
+                          {`Benchmarking analysis.`}
+                        </Typography>
+                      </Box>
+                    </Paper>
+                  </Grid>
                 </Grid>
-              </Grid>
+              </Box>
             </Box>
             <Box component="section" mb={10} id="validationAndIdeation">
               <Grid container spacing={6}>
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <Typography component="h4" variant="h4" color="primary" fontWeight={600}>
-                      Validation and ideation
+                      {`Validation and ideation`}
                     </Typography>
                     <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
-                      Heuristic analysis
+                      {`Heuristic analysis`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                      To brought better improvements in the page, I conducted an Heuristic analysis to got insights and opportunities for improvements:
+                      {`To bring better improvements to the page, I conducted an heuristic analysis to get insights and opportunities for improvements.`}
                     </Typography>
                   </Stack>
                 </Grid>
@@ -382,23 +438,38 @@ const BrastempExperience: NextPage = () => {
                     py: 2,
                     px: 3,
                   })}>
-                    <Stack spacing={2}>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        <Typography component="span" color="text.primary" fontWeight={500}>Findability</Typography> Organization and prioritization of the information
+                    <Typography component="dl" variant="body1">
+                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                        {`Findability`}
                       </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        <Typography component="span" color="text.primary" fontWeight={500}>Accessibility</Typography> This service page is not accessible at all
+                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                        {`Organization and prioritization of the information.`}
                       </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        <Typography component="span" color="text.primary" fontWeight={500}>Desirability</Typography> Is this service useful and helpful for user needs?
+                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                        {`Accessibility`}
                       </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        <Typography component="span" color="text.primary" fontWeight={500}>Usability</Typography> Bugs and absence of returning error messages
+                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                        {`This service page is not accessible at all.`}
                       </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        <Typography component="span" color="text.primary" fontWeight={500}>Storytelling</Typography> Doesn&apos;t explain or shares what users can do
+                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                        {`Desirability`}
                       </Typography>
-                    </Stack>
+                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                        {`Is this service useful and helpful for user needs?`}
+                      </Typography>
+                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                        {`Usability`}
+                      </Typography>
+                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                        {`Bugs and absence of returning error messages.`}
+                      </Typography>
+                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                        {`Storytelling`}
+                      </Typography>
+                      <Typography component="dd" color="text.secondary" fontWeight={300}>
+                        {`Does it explain or share thoughts on what users can do?`}
+                      </Typography>
+                    </Typography>
                   </Paper>
                 </Grid>
               </Grid>
@@ -420,7 +491,7 @@ const BrastempExperience: NextPage = () => {
                         mb: 1,
                       }} />
                       <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                        Heuristic analysis. Participants: Product Designers.
+                        {`Heuristic analysis. Participants: Product Designers.`}
                       </Typography>
                     </Box>
                     <Box component="figure">
@@ -432,7 +503,7 @@ const BrastempExperience: NextPage = () => {
                         mb: 1,
                       }} />
                       <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                        Heuristic comparison with other service pages. Participants: Product Designers.
+                        {`Heuristic comparison with other service pages. Participants: Product Designers.`}
                       </Typography>
                     </Box>
                   </Box>
@@ -443,13 +514,18 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
                       <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
-                        Brainstorm
+                        {`Brainstorm`}
+                      </Typography>
+                      <Typography component="p" variant="body1" color="text.secondary">
+                        <Typography component="span" fontWeight={300}>
+                          {`I discovered that users access our service page because they are looking to schedule a visit to repair their home appliance. `}
+                        </Typography>
+                        <Typography component="strong" fontWeight={500}>
+                          {`This was the opportunity we were looking for!`}
+                        </Typography>
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        I discovered that users access our service page because they are looking to schedule a visit to repair their home appliance, <Typography component="span" fontWeight={500}>this was the oportunity we were looking for!</Typography>
-                      </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        The next stage was to bring solutions with the team. How can we explore this scenario and improve a better way to do it?
+                        {`The next stage was to find solutions with the team. How can we explore this scenario and improve a better way to do it?`}
                       </Typography>
                     </Stack>
                   </Grid>
@@ -470,7 +546,7 @@ const BrastempExperience: NextPage = () => {
                           mb: 1,
                         }} />
                         <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                          Brainstorm. Participants: Product Designers, Developers, Product Owner, CRO and Tech Lead.
+                          {`Brainstorming session. Participants: Product Designers, Developers, Product Owner, CRO and Tech Lead.`}
                         </Typography>
                       </Box>
                     </Paper>
@@ -482,21 +558,21 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
                       <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
-                        Prioritization matrix
+                        {`Prioritization matrix`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        After the brainstorming we got a lot of ideas and we needed to filter and choose which one should be the best choice. The prioritization matrix helped us to prioritize according to technology and business point of view (the user needs we taked care since the beggining) We invest in the ideas with low technology effort and high business value.
+                        {`After the brainstorming, we got a lot of ideas, and we needed to filter and choose which one should be the best choice. The prioritization matrix assisted us in prioritizing ideas based on technology and business value (the user needs we addressed from the start), and we invested in ideas with low technological effort and high business value.`}
                       </Typography>
-                      <Stack spacing={1} pt={1}>
+                      <Stack spacing={2} pt={1}>
                         <Typography component="h6" variant="body1" color="text.primary" fontWeight={500}>
-                          Solutions from Brainstorming
+                          {`Solutions from brainstorming`}
                         </Typography>
                         <Stack component="ol" spacing={1} pl={2.25}>
                           <Typography component="li" variant="body1" fontWeight={300}>
-                            Offer the types of the service in the page (installation, conversion and repair)
+                            {`Offer the types of service on the page (installation, conversion and repair)`}
                           </Typography>
                           <Typography component="li" variant="body1" fontWeight={300}>
-                            Map improvements (color contrast and information)
+                            {`Map improvements (color contrast and information)`}
                           </Typography>
                         </Stack>
                       </Stack>
@@ -519,7 +595,7 @@ const BrastempExperience: NextPage = () => {
                           mb: 1,
                         }} />
                         <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                          Prioritizing the improvements. Participants: Product Designers, Product Owner and Tech Lead.
+                          {`Prioritizing the improvements. Participants: Product Designers, Product Owner and Tech Lead.`}
                         </Typography>
                       </Box>
                     </Paper>
@@ -527,23 +603,23 @@ const BrastempExperience: NextPage = () => {
                 </Grid>
               </Box>
               <Box component="article" my={6}>
-                <Grid container spacing={6}>
+                <Grid container>
                   <Grid item xs={12}>
                     <Stack spacing={2}>
                       <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
-                        Ideation
+                        {`Ideation`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        This stage we already had a page of the service, we made incremental improvements and added the solutions in a strategic way. The challenge in this moment was to deliver an assertive solution without making a lot of changes.
+                        {`At this stage, we already had a page of the service. We made incremental improvements and added the solutions in a strategic way. The challenge at this moment was to deliver an assertive solution without making a lot of changes.`}
                       </Typography>
                     </Stack>
                   </Grid>
                 </Grid>
               </Box>
-              <Box component="article" my={6}>
+              <Box my={6}>
                 <Box mb={2}>
                   <Typography component="h6" variant="body1" color="text.primary" fontWeight={500}>
-                    1. Offer the types of the service in the page (installation, conversion and repair)
+                    {`1. Offer the types of service on the page (installation, conversion and repair)`}
                   </Typography>
                 </Box>
                 <Grid container spacing={4}>
@@ -553,6 +629,7 @@ const BrastempExperience: NextPage = () => {
                       src="/images/projects/brastemp-experience/ideation-1a.png"
                       alt="Origin page"
                       sx={{
+                        mb: 1,
                         width: '100%',
                         height: 'auto',
                       }}
@@ -564,20 +641,21 @@ const BrastempExperience: NextPage = () => {
                       src="/images/projects/brastemp-experience/ideation-1b.png"
                       alt="New page"
                       sx={{
+                        mb: 1,
                         width: '100%',
                         height: 'auto',
                       }}
                     />
                   </Grid>
                 </Grid>
-                <Typography component="p" variant="caption" color="text.secondary" fontWeight={300} textAlign="center">
-                  A comparison with the two pages before incremental improvements: on the left is the origin page and on the right is the new page.
+                <Typography component="p" variant="body2" color="text.secondary" fontWeight={300} textAlign="center">
+                  {`A comparison of the two pages before incremental improvements: on the left is the origin page and on the right is the new page.`}
                 </Typography>
               </Box>
-              <Box component="article" my={6}>
+              <Box my={6}>
                 <Box mb={2}>
                   <Typography component="h6" variant="body1" color="text.primary" fontWeight={500}>
-                    2. Map improvements (color contrast and information)
+                    {`2. Map improvements (color contrast and information)`}
                   </Typography>
                 </Box>
                 <Grid container spacing={4}>
@@ -587,6 +665,7 @@ const BrastempExperience: NextPage = () => {
                       src="/images/projects/brastemp-experience/ideation-2a.png"
                       alt="Origin page"
                       sx={{
+                        mb: 1,
                         width: '100%',
                         height: 'auto',
                       }}
@@ -598,14 +677,15 @@ const BrastempExperience: NextPage = () => {
                       src="/images/projects/brastemp-experience/ideation-2b.png"
                       alt="New page"
                       sx={{
+                        mb: 1,
                         width: '100%',
                         height: 'auto',
                       }}
                     />
                   </Grid>
                 </Grid>
-                <Typography component="p" variant="caption" color="text.secondary" fontWeight={300} textAlign="center">
-                  A comparison with the two pages before incremental improvements: on the left is the origin page and on the right is the new page.
+                <Typography component="p" variant="body2" color="text.secondary" fontWeight={300} textAlign="center">
+                  {`A comparison of the two pages before incremental improvements: on the left is the origin page and on the right is the new page.`}
                 </Typography>
               </Box>
             </Box>
@@ -614,10 +694,10 @@ const BrastempExperience: NextPage = () => {
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <Typography component="h4" variant="h4" color="primary" fontWeight={600}>
-                      Results and learnings
+                      {`Results and learnings`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                      In this project, I had the opportunity to use design methods of learning about our user. The biggest challenge was to adapt the process to our deadline and the user&apos;s low engagement turned difficult to interview to get more details of the user&apos;s need. Perhaps it&apos;s because at the moment of the user journey, they come to us already with a problem and then try to use our services to solve making our contact more difficult to make (they just want their problem to be solved!).
+                      {`In this project, I had the opportunity to use design methods of learning about our users. The biggest challenge was to adapt the process to our deadline and the user's low engagement made it difficult to interview for more details of the user's needs. Perhaps it's because at the moment of the user journey, they come to us already with a problem and then try to use our services to solve it, making our contact more difficult to make (they just want their problem to be solved!).`}
                     </Typography>
                   </Stack>
                 </Grid>
@@ -629,20 +709,20 @@ const BrastempExperience: NextPage = () => {
                     pb: 6,
                     textAlign: 'center',
                   })}>
-                    <Stack spacing={1.5}>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center">
-                        <Typography component="span" variant="h4" color="primary" fontWeight={600} pr={1.5}>
-                          +25%
+                    <Stack spacing={2}>
+                      <Box component="p" display="flex" alignItems="center" justifyContent="center" gap={1}>
+                        <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                          {`+25%`}
                         </Typography>
                         <Typography component="span" variant="body1" color="primary" fontWeight={500}>
-                          of the user schedule their visit online!
+                          {`of users scheduling their visit online!`}
                         </Typography>
                       </Box>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        Strategic goal achieved!&nbsp;&nbsp;🎉&nbsp;🎉
+                        {`Strategic goal achieved!`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        -11% on telephone calls reduction!
+                        {`-11% on telephone calls!`}
                       </Typography>
                     </Stack>
                   </Paper>

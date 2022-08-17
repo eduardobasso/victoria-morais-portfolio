@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { AppBar, Box, Button, Container, IconButton, Link, Slide, Toolbar, Tooltip, Typography, useScrollTrigger, Zoom } from '@mui/material'
 import { alpha } from '@mui/material/styles'
 
-import { GitHubCircle, LinkedInCircle, MediumCircle } from './custom-icons'
+import { GitHub, LinkedInCircle, MediumCircle } from './custom-icons'
 
 function PageNavbar() {
   const router = useRouter()
@@ -72,7 +72,7 @@ function PageNavbar() {
                   bgcolor: alpha(theme.palette.common.white, .3),
                 },
               })} aria-label="View profile on GitHub" id="btnGitHub">
-                <GitHubCircle />
+                <GitHub />
               </IconButton>
             </Tooltip>
             <Tooltip title="LinkedIn" TransitionComponent={Zoom}>

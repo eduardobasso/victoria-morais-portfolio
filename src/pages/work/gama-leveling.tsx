@@ -272,11 +272,11 @@ const SkillAssessment: NextPage = () => {
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                       {`After the data analysis, I had information to use during the creation of a solution. I made an align diagram to identify the value with the business and user needs.`}
                     </Typography>
-                    <Stack spacing={1}>
-                      <Typography component="h6" variant="body1" fontWeight={500} mt={1}>
+                    <Stack spacing={2} pt={1}>
+                      <Typography component="h6" variant="body1" fontWeight={500}>
                         {`Business requirements`}
                       </Typography>
-                      <Stack component="ol" pl={2.25}>
+                      <Stack component="ol" spacing={1} pl={2.25}>
                         <Typography component="li" variant="body1" fontWeight={300}>
                           {`Responsible website;`}
                         </Typography>
@@ -326,11 +326,11 @@ const SkillAssessment: NextPage = () => {
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                         {`At this moment, we created a temporary page on Unbounce to start improvements to the service. Unbounce allowed us to create a fast, independent page without developers, but in contrast, we lost the design brand along the way. A website creation was in progress to develop all the pages and maintain them under the same brand.`}
                       </Typography>
-                      <Stack spacing={1}>
-                        <Typography component="p" variant="body1" fontWeight={300} mt={1}>
+                      <Stack spacing={2} pt={1}>
+                        <Typography component="p" variant="body1" fontWeight={300}>
                           {`The Gama leveling page was based on answering the following questions:`}
                         </Typography>
-                        <Stack component="ol" pl={2.25}>
+                        <Stack component="ol" spacing={1} pl={2.25}>
                           <Typography component="li" variant="body1" fontWeight={300}>
                             {`What is that about?`}
                           </Typography>
@@ -546,11 +546,11 @@ const SkillAssessment: NextPage = () => {
                       <Typography component="h5" variant="h5" color="text.secondary" fontWeight={500}>
                         {`Usability test`}
                       </Typography>
-                      <Stack spacing={1}>
+                      <Stack spacing={2}>
                         <Typography component="p" variant="body1" fontWeight={300}>
                           {`It was a remote-moderated test with 5 users. Each participant had 4 tasks to complete:`}
                         </Typography>
-                        <Stack component="ol" pl={2.25}>
+                        <Stack component="ol" spacing={1} pl={2.25}>
                           <Typography component="li" variant="body1" fontWeight={300}>
                             {`Finish a test;`}
                           </Typography>
@@ -564,10 +564,10 @@ const SkillAssessment: NextPage = () => {
                             {`Try to take another test.`}
                           </Typography>
                         </Stack>
+                        <Link display="inline-block" variant="body1" fontWeight={500} href="/documents/usability-test-feedbacks.pdf" target="_blank" underline="hover">
+                          {`You can see the anotations of the usability test here`}
+                        </Link>
                       </Stack>
-                      <Link variant="body1" fontWeight={500} href="/documents/usability-test-feedbacks.pdf" target="_blank" underline="hover">
-                        {`You can see the anotations of the usability test here`}
-                      </Link>
                     </Stack>
                   </Grid>
                 </Grid>
