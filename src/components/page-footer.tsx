@@ -33,7 +33,7 @@ function PageFooter() {
           }} />
         </Grid>
         <Grid item xs="auto">
-          <Link variant="caption" fontWeight={500} href="https://github.com/eduardobasso" target="_blank" underline="hover">
+          <Link variant="caption" fontWeight={500} href="https://github.com/eduardobasso/victoria-morais-portfolio" target="_blank" underline="hover">
             {`Eduardo Basso`}
           </Link>
         </Grid>

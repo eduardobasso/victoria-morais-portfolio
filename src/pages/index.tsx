@@ -5,7 +5,7 @@ import ProfileSection from '../components/profile-section'
 import InnerHeading from '../components/inner-heading'
 import WorkSection from '../components/work-section'
 
-const Home: NextPage = () => {
+const Index: NextPage = () => {
   return (
     <PageWrapper>
       <ProfileSection />
@@ -15,4 +15,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Index

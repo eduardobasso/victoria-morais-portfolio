@@ -8,13 +8,14 @@ import ContentNavbar from '../../components/content-navbar'
 
 import theme from '../../theme/gama-academy'
 
-let gamaAcademyTheme = createTheme(theme)
-gamaAcademyTheme = responsiveFontSizes(gamaAcademyTheme)
-
 const SkillAssessment: NextPage = () => {
+  const gamaAcademyTheme = responsiveFontSizes(createTheme(theme))
+
   return (
     <PageWrapper>
-      <h2 hidden>Work</h2>
+      <h2 hidden>
+        {`Work`}
+      </h2>
       <ThemeProvider theme={gamaAcademyTheme}>
         <ProjectCover
           title={`Gama leveling`}
@@ -50,12 +51,12 @@ const SkillAssessment: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Paper elevation={0} sx={(theme) => ({
+                  <Paper elevation={0} sx={{
                     borderRadius: 0,
                     px: 4,
                     py: 6,
                     textAlign: 'center',
-                  })}>
+                  }}>
                     <Stack spacing={1}>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                         {`Estimated time: 1 month`}

@@ -1,28 +1,30 @@
-# Victoria Morais' Portfolio
+# Victoria Morais' portfolio
 
-Portfolio containing Victoria Morais' work as a Designer.
+A portfolio containing Victoria's work as a Designer.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/64ed6e59-0c8f-463c-860a-8e861a5645ae/deploy-status)](https://app.netlify.com/sites/victoriamorais-portfolio/deploys)
 
-## Install packages:
+## Dev environment setup
+
+### Install packages:
 
 ```
 yarn
 ```
 
-### Add a package:
+#### Add a package:
 
 ```
 yarn add <package-name>
 ```
 
-### Remove a package:
+#### Remove a package:
 
 ```
 yarn remove <package-name>
 ```
 
-## Run development environment:
+### Run development environment:
 
 ```
 yarn dev

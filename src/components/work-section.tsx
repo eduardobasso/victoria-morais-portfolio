@@ -5,7 +5,9 @@ import ProjectCard from './project-card'
 function WorkSection() {
   return (
     <Box component="section" my={6.5}>
-      <h3 hidden>Work</h3>
+      <h3 hidden>
+        {`Work`}
+      </h3>
       <Container>
         <Stack spacing={8.5} mt={7.25}>
           <ProjectCard

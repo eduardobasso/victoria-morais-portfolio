@@ -1,3 +1,4 @@
+// import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
 import type { NextPage } from 'next'
 import { Box, Container, Grid, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
@@ -8,13 +9,29 @@ import ContentNavbar from '../../components/content-navbar'
 
 import theme from '../../theme/brastemp'
 
-let brastempTheme = createTheme(theme)
-brastempTheme = responsiveFontSizes(brastempTheme)
+// export const getServerSideProps: GetServerSideProps = async ({ req: { cookies } }: GetServerSidePropsContext) => {
+//   if (true) {
+//     return {
+//       props: {},
+//     }
+//   }
+
+//   return {
+//     redirect: {
+//       destination: '/',
+//       permanent: false,
+//     },
+//   }
+// }
 
 const BrastempExperience: NextPage = () => {
+  const brastempTheme = responsiveFontSizes(createTheme(theme))
+
   return (
     <PageWrapper>
-      <h2 hidden>Work</h2>
+      <h2 hidden>
+        {`Work`}
+      </h2>
       <ThemeProvider theme={brastempTheme}>
         <ProjectCover
           title={`Technical assistance location`}
@@ -50,12 +67,12 @@ const BrastempExperience: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Paper elevation={0} sx={(theme) => ({
+                  <Paper elevation={0} sx={{
                     borderRadius: 0,
                     py: 6,
                     px: 4,
                     textAlign: 'center',
-                  })}>
+                  }}>
                     <Stack spacing={1}>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                         {`Estimated time: 4 months`}
@@ -184,12 +201,12 @@ const BrastempExperience: NextPage = () => {
                     </Stack>
                   </Grid>
                   <Grid item xs={12} md={6}>
-                    <Paper elevation={0} sx={(theme) => ({
+                    <Paper elevation={0} sx={{
                       borderRadius: 0,
                       py: 6,
                       px: 4,
                       textAlign: 'center',
-                    })}>
+                    }}>
                       <Stack spacing={1}>
                         <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                           {`+60% of organic access`}
@@ -247,17 +264,17 @@ const BrastempExperience: NextPage = () => {
               <Box my={6}>
                 <Grid container spacing={6}>
                   <Grid item xs={12} md={7}>
-                    <Paper elevation={0} sx={(theme) => ({
+                    <Paper elevation={0} sx={{
                       borderRadius: 0,
                       py: 4,
                       px: 2,
                       textAlign: 'center',
-                    })}>
+                    }}>
                       <Stack spacing={2}>
                         <Typography component="h6" variant="body1" color="text.secondary" fontWeight={500}>
                           {`What's the channel preference for looking for information?`}
                         </Typography>
-                        <Box component="p" display="flex" alignItems="center" justifyContent="center">
+                        <Box display="flex" alignItems="center" justifyContent="center">
                           <TableContainer sx={{ width: 'auto' }}>
                             <Table sx={{ width: 'auto' }}>
                               <TableBody>
@@ -305,17 +322,17 @@ const BrastempExperience: NextPage = () => {
                     </Paper>
                   </Grid>
                   <Grid item xs={12} md={5}>
-                    <Paper elevation={0} sx={(theme) => ({
+                    <Paper elevation={0} sx={{
                       borderRadius: 0,
                       py: 4,
                       px: 2,
                       textAlign: 'center',
-                    })}>
+                    }}>
                       <Stack spacing={2}>
                         <Typography component="h6" variant="body1" color="text.secondary" fontWeight={500}>
                           {`What do they need for this service?`}
                         </Typography>
-                        <Box component="p" display="flex" alignItems="center" justifyContent="center">
+                        <Box display="flex" alignItems="center" justifyContent="center">
                           <TableContainer sx={{ width: 'auto' }}>
                             <Table sx={{ width: 'auto' }}>
                               <TableBody>
@@ -433,11 +450,11 @@ const BrastempExperience: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Paper elevation={0} sx={(theme) => ({
+                  <Paper elevation={0} sx={{
                     borderRadius: 0,
                     py: 2,
                     px: 3,
-                  })}>
+                  }}>
                     <Typography component="dl" variant="body1">
                       <Typography component="dt" color="text.primary" fontWeight={500}>
                         {`Findability`}
@@ -702,13 +719,13 @@ const BrastempExperience: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Paper elevation={0} sx={(theme) => ({
+                  <Paper elevation={0} sx={{
                     borderRadius: 0,
                     pt: 4,
                     px: 3,
                     pb: 6,
                     textAlign: 'center',
-                  })}>
+                  }}>
                     <Stack spacing={2}>
                       <Box component="p" display="flex" alignItems="center" justifyContent="center" gap={1}>
                         <Typography component="strong" variant="h4" color="primary" fontWeight={600}>

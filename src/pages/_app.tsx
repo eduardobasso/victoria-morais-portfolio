@@ -7,7 +7,7 @@ import theme from '../theme'
 let appTheme = createTheme(theme)
 appTheme = responsiveFontSizes(appTheme)
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={appTheme}>
       <CssBaseline />
@@ -16,4 +16,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default App
