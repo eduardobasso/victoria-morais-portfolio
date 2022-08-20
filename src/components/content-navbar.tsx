@@ -9,7 +9,7 @@ type ContentNavbarProps = {
 
 function ContentNavbar({ items }: ContentNavbarProps) {
   const scrollToAnchor = (anchorId: string) => {
-    const anchor = document.getElementById(anchorId);
+    const anchor = document.getElementById(anchorId)
     if (anchor) anchor.scrollIntoView({
       behavior: 'smooth',
     })

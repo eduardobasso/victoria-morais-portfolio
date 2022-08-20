@@ -6,6 +6,8 @@ import InnerHeading from '../components/inner-heading'
 import WorkSection from '../components/work-section'
 
 const Index: NextPage = () => {
+  console.log(process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_KEY)
+
   return (
     <PageWrapper>
       <ProfileSection />
