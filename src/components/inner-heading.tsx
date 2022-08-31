@@ -1,11 +1,11 @@
 import { Box, Container, Typography } from '@mui/material'
 import { PandaFace } from './custom-emojis'
 
-type InnerHeadingProps = {
+type TInnerHeadingProps = {
   text: string
 }
 
-function InnerHeading({ text }: InnerHeadingProps) {
+function InnerHeading({ text }: TInnerHeadingProps) {
   return (
     <Box position="relative" mt={-.125}>
       <Box color="common.black">

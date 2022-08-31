@@ -3,14 +3,14 @@ import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
 
 import { OpenInNew } from './custom-icons'
 
-type ProjectCoverProps = {
+type TProjectCoverProps = {
   title: string
   description: string
   image: string
   presentationUrl?: string
 }
 
-function ProjectCover({ title, description, image, presentationUrl }: ProjectCoverProps) {
+function ProjectCover({ title, description, image, presentationUrl }: TProjectCoverProps) {
   return (
     <ParallaxProvider>
       <Box component="section" position="relative">

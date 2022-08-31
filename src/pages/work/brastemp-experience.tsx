@@ -1,5 +1,6 @@
-// import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
 import type { NextPage } from 'next'
+// import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
+// import nookies from 'nookies'
 import { Box, Container, Grid, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 
@@ -9,8 +10,11 @@ import ContentNavbar from '../../components/content-navbar'
 
 import theme from '../../theme/brastemp'
 
-// export const getServerSideProps: GetServerSideProps = async ({ req: { cookies } }: GetServerSidePropsContext) => {
-//   if (true) {
+// export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+//   const cookies = nookies.get(context)
+//   console.log(cookies);
+
+//   if (cookies[`${process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_KEY}`] === process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_VALUE) {
 //     return {
 //       props: {},
 //     }
@@ -18,7 +22,7 @@ import theme from '../../theme/brastemp'
 
 //   return {
 //     redirect: {
-//       destination: '/',
+//       destination: '/not-authorized',
 //       permanent: false,
 //     },
 //   }
@@ -736,7 +740,7 @@ const BrastempExperience: NextPage = () => {
                         </Typography>
                       </Box>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        {`Strategic goal achieved!`}
+                        {`Strategic goal achieved! 🎉 🎉`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                         {`-11% on telephone calls!`}

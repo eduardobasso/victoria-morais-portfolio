@@ -6,11 +6,11 @@ import PageNavbar from './page-navbar'
 import PageFooter from './page-footer'
 import ScrollTopButton from './scroll-top-button'
 
-type PageWrapperProps = {
+type TPageWrapperProps = {
   children: ReactNode
 }
 
-function PageWrapper({ children }: PageWrapperProps) {
+function PageWrapper({ children }: TPageWrapperProps) {
   return (
     <Stack minHeight="100vh">
       <Head>

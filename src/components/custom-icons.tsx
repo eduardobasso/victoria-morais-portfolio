@@ -1,5 +1,21 @@
 import { SvgIcon, SvgIconProps } from '@mui/material'
 
+export function ArrowForward(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 20 20" {...props}>
+      <path d="M3.3335 9.16669V10.8334H13.3335L8.75016 15.4167L9.9335 16.6L16.5335 10L9.9335 3.40002L8.75016 4.58336L13.3335 9.16669H3.3335Z" />
+    </SvgIcon>
+  )
+}
+
+export function Close(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 28 28" {...props}>
+      <path fillRule="evenodd" clipRule="evenodd" d="M22.1668 7.47834L20.5218 5.83334L14.0002 12.355L7.4785 5.83334L5.8335 7.47834L12.3552 14L5.8335 20.5217L7.4785 22.1667L14.0002 15.645L20.5218 22.1667L22.1668 20.5217L15.6452 14L22.1668 7.47834Z" />
+    </SvgIcon>
+  )
+}
+
 export function DoubleArrowUp(props: SvgIconProps) {
   return (
     <SvgIcon {...props}>

@@ -19,6 +19,7 @@ function WorkSection() {
             imgAlt={`Brastemp cover`}
             imgPos="right"
             route="/work/brastemp-experience"
+            confidential
           />
           <ProjectCard
             company={`Gama Academy`}
@@ -29,6 +30,7 @@ function WorkSection() {
             imgAlt={`Gama leveling cover`}
             imgPos="left"
             route="/work/gama-leveling"
+            confidential
           />
           <ProjectCard
             company={`UX/UI trial work`}

@@ -1,13 +1,13 @@
 import { Box, Link } from '@mui/material'
 
-type ContentNavbarProps = {
+type TContentNavbarProps = {
   items: Array<{
     label: string
     anchorId: string
   }>
 }
 
-function ContentNavbar({ items }: ContentNavbarProps) {
+function ContentNavbar({ items }: TContentNavbarProps) {
   const scrollToAnchor = (anchorId: string) => {
     const anchor = document.getElementById(anchorId)
     if (anchor) anchor.scrollIntoView({
