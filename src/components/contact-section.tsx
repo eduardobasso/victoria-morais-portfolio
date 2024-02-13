@@ -1,15 +1,15 @@
-import { Box, Container, Grid, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material'
+import { Box, Container, Grid, Link, List, ListItem, ListItemIcon, ListItemText, Stack, ThemeOptions, Typography } from '@mui/material'
 
 import { EmailOutlined, LinkedIn, WhatsAppOutlined } from './custom-icons'
 
 function ContactSection() {
   return (
-    <Box component="section" sx={({ palette: { primary: { main, contrastText } } }) => ({
-      bgcolor: main,
+    <Box component="section" sx={{
+      bgcolor: 'primary.main',
       pt: 6,
       pb: 8,
-      color: contrastText,
-    })}>
+      color: 'primary.contrastText',
+    }}>
       <h2 hidden>
         {`Contact`}
       </h2>
@@ -48,8 +48,8 @@ function ContactSection() {
                   variant: 'body2',
                   fontWeight: 500,
                 }}>
-                  <Link color="inherit" href="mailto:moraes_victoria@hotmail.com" underline="hover">
-                    {`moraes_victoria@hotmail.com`}
+                  <Link color="inherit" href="mailto:victoria.morais.sa@gmail.com" underline="hover">
+                    {`victoria.morais.sa@gmail.com`}
                   </Link>
                 </ListItemText>
               </ListItem>

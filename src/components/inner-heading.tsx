@@ -24,7 +24,7 @@ function InnerHeading({ text }: TInnerHeadingProps) {
         left: 0,
         width: '100%',
         bgcolor: 'common.black',
-        maxHeight: '80%',
+        maxHeight: '81%',
         overflow: 'hidden',
         color: 'common.white'
       }} aria-hidden="true">

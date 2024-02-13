@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-// import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
-// import nookies from 'nookies'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { Box, Container, Grid, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 
@@ -10,25 +10,15 @@ import ContentNavbar from '../../components/content-navbar'
 
 import theme from '../../theme/brastemp'
 
-// export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-//   const cookies = nookies.get(context)
-//   console.log(cookies);
-
-//   if (cookies[`${process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_KEY}`] === process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_VALUE) {
-//     return {
-//       props: {},
-//     }
-//   }
-
-//   return {
-//     redirect: {
-//       destination: '/not-authorized',
-//       permanent: false,
-//     },
-//   }
-// }
-
 const BrastempExperience: NextPage = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    if (sessionStorage.getItem('password.victoriamorais.design') === null) {
+      router.push('/work')
+    }
+  })
+
   const brastempTheme = responsiveFontSizes(createTheme(theme))
 
   return (

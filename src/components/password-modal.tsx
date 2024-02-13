@@ -1,6 +1,6 @@
-import { ChangeEvent, FormEvent, useRef, useState } from 'react'
-import { Box, Button, Dialog, DialogContent, FilledInput, FormControl, FormHelperText, Grid, IconButton, InputAdornment, InputLabel, Typography, useMediaQuery, useTheme, Zoom } from '@mui/material'
-// import { setCookie } from 'nookies'
+import { type ChangeEvent, type FormEvent, useLayoutEffect, useRef, useState } from 'react'
+import { Box, Button, Dialog, DialogContent, FilledInput, FormControl, FormHelperText, Grid, IconButton, InputAdornment, InputLabel, Typography, useMediaQuery, Zoom } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 
 import { ArrowForward, Close } from './custom-icons'
 
@@ -28,8 +28,6 @@ function PasswordModal({ open, onClose, onConfirm }: TPasswordModalProps) {
     hideErrorHelper()
   }
 
-  console.log('render');
-
   const close = () => {
     if (onClose) onClose()
   }
@@ -37,29 +35,31 @@ function PasswordModal({ open, onClose, onConfirm }: TPasswordModalProps) {
   const confirm = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    console.log('password is', passwordInputRef.current?.value)
+    const value = passwordInputRef.current?.value
+    const password = process.env.NEXT_PUBLIC_DEFAULT_PASSWORD
 
-    if (passwordInputRef.current?.value === process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_VALUE) {
-      console.log('password is correct') // success
+    if (password === undefined) return
 
-      // setCookie(null, `${process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_KEY}`, `${process.env.NEXT_PUBLIC_DEFAULT_PASSWORD_VALUE}`), {
-      //   maxAge: 1,
-      //   path: '/',
-      // }
+    if (value === password) {
+      sessionStorage.setItem('password.victoriamorais.design', password)
 
       if (onConfirm) onConfirm()
     } else {
-      console.log('password is wrong') // error
-
       showErrorHelper()
 
       passwordInputRef.current?.focus()
     }
-
-    // if (onConfirm) onConfirm()
   }
 
   const fullScreen = useMediaQuery(useTheme().breakpoints.down('sm'))
+
+  useLayoutEffect(() => {
+    if (open) {
+      setTimeout(() => {
+        passwordInputRef.current?.focus()
+      }, 50)
+    }
+  }, [open])
 
   return (
     <Dialog open={open} onClose={close} fullScreen={fullScreen}>

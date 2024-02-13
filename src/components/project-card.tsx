@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material'
+import type { Theme } from '@mui/material/styles'
+
 import PasswordModal from './password-modal'
 
 type TProjectCardProps = {
@@ -33,7 +35,9 @@ function ProjectCard({ company, title, description, role, imgSrc, imgAlt, imgPos
   }
 
   const validateBeforeEnter = () => {
-    if (confidential) {
+    const password = sessionStorage.getItem('password.victoriamorais.design')
+
+    if (confidential && password === null) {
       openModal()
     } else {
       enterRoute()
@@ -42,7 +46,7 @@ function ProjectCard({ company, title, description, role, imgSrc, imgAlt, imgPos
 
   return (
     <>
-      <Card elevation={0} sx={(theme) => ({
+      <Card elevation={0} sx={(theme: Theme) => ({
         borderRadius: 0,
         bgcolor: 'background.default',
         [theme.breakpoints.up('md')]: {
@@ -55,7 +59,7 @@ function ProjectCard({ company, title, description, role, imgSrc, imgAlt, imgPos
           mx: -2,
         },
       })}>
-        <CardActionArea component="div" sx={(theme) => ({
+        <CardActionArea component="div" sx={(theme: Theme) => ({
           [theme.breakpoints.up('md')]: {
             display: 'flex',
             flexDirection: (imgPos === 'right') ? 'row' : 'row-reverse',
@@ -81,8 +85,8 @@ function ProjectCard({ company, title, description, role, imgSrc, imgAlt, imgPos
               }
             },
           }
-        })} onClick={enterRoute}>
-          <CardContent sx={(theme) => ({
+        })} onClick={validateBeforeEnter}>
+          <CardContent sx={(theme: Theme) => ({
             flexGrow: 1,
             [theme.breakpoints.up('md')]: {
               pr: (imgPos === 'right') ? 19.5 : 0,
@@ -102,7 +106,7 @@ function ProjectCard({ company, title, description, role, imgSrc, imgAlt, imgPos
               {`My role: ${role}`}
             </Typography>
           </CardContent>
-          <CardMedia component="img" sx={(theme) => ({
+          <CardMedia component="img" sx={(theme: Theme) => ({
             width: '100%',
             height: 'auto',
             textAlign: 'center',

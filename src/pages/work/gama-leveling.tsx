@@ -1,4 +1,6 @@
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { Box, Container, Grid, Link, Paper, Stack, Typography } from '@mui/material'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 
@@ -9,6 +11,14 @@ import ContentNavbar from '../../components/content-navbar'
 import theme from '../../theme/gama-academy'
 
 const SkillAssessment: NextPage = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    if (sessionStorage.getItem('password.victoriamorais.design') === null) {
+      router.push('/work')
+    }
+  })
+
   const gamaAcademyTheme = responsiveFontSizes(createTheme(theme))
 
   return (
