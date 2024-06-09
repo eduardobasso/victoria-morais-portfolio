@@ -7,13 +7,14 @@ import ScrollTopButton from './scroll-top-button';
 
 type TPageWrapperProps = {
     children: ReactNode;
+    title?: string;
 };
 
-function PageWrapper({ children }: TPageWrapperProps) {
+function PageWrapper({ children, title = 'Portfolio' }: TPageWrapperProps) {
     return (
         <Stack minHeight="100vh">
             <Head>
-                <title>Portfolio | Victoria Morais</title>
+                <title>{`${title} | Victoria Morais`}</title>
             </Head>
             <Box component="main" flexGrow={1}>
                 <PageNavbar />

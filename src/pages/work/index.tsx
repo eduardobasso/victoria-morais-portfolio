@@ -5,7 +5,7 @@ import WorkSection from '../../components/work-section';
 
 const Work: NextPage = () => {
     return (
-        <PageWrapper>
+        <PageWrapper title={`Work`}>
             <InnerHeading text={`My work`} />
             <WorkSection />
         </PageWrapper>

@@ -4,6 +4,7 @@ function Document() {
     return (
         <Html lang="en">
             <Head>
+                <meta charSet="utf-8" />
                 <meta
                     name="description"
                     content={`A portfolio containing Victoria's work as a Designer. Victoria Morais Santos is a Designer with UX/UI and Product Design skills with more than 5 years of experience. She is currently working at Tangível and living in Porto, Portugal.`}

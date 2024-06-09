@@ -20,7 +20,7 @@ const SkillAssessment: NextPage = () => {
     const gamaAcademyTheme = responsiveFontSizes(createTheme(theme));
 
     return (
-        <PageWrapper>
+        <PageWrapper title={`Gama leveling`}>
             <h2 hidden>{`Work`}</h2>
             <ThemeProvider theme={gamaAcademyTheme}>
                 <ProjectCover

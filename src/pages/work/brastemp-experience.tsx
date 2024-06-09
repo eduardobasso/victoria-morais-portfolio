@@ -32,7 +32,7 @@ const BrastempExperience: NextPage = () => {
     const brastempTheme = responsiveFontSizes(createTheme(theme));
 
     return (
-        <PageWrapper>
+        <PageWrapper title={`Brastemp Experience`}>
             <h2 hidden>{`Work`}</h2>
             <ThemeProvider theme={brastempTheme}>
                 <ProjectCover

@@ -4,7 +4,7 @@ import PageWrapper from '../components/page-wrapper';
 
 const NotAuthorized: NextPage = () => {
     return (
-        <PageWrapper>
+        <PageWrapper title={`Not authorized`}>
             <InnerHeading text={`Not authorized`} />
         </PageWrapper>
     );
