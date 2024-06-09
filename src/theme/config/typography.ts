@@ -1,10 +1,7 @@
-import { TypographyVariantsOptions } from '@mui/material/styles'
+import { TypographyVariantsOptions } from '@mui/material/styles';
 
 const typography: TypographyVariantsOptions = {
-  fontFamily: [
-    'Montserrat',
-    'sans-serif',
-  ].join(','),
-}
+    fontFamily: ['Montserrat', 'sans-serif'].join(','),
+};
 
-export default typography
+export default typography;

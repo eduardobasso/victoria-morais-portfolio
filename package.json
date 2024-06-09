@@ -1,35 +1,38 @@
 {
-  "name": "victoria-morais-portfolio",
-  "version": "1.0.0",
-  "description": "A portfolio containing Victoria Morais' work as a Designer",
-  "homepage": "https://victoriamorais.design",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/eduardobasso/victoria-morais-portfolio.git"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "11.10.0",
-    "@emotion/styled": "11.10.0",
-    "@mui/material": "5.15.9",
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-scroll-parallax": "3.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.21",
-    "@types/react": "18.0.17",
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5",
-    "prettier": "2.7.1",
-    "sass": "1.54.4",
-    "typescript": "4.7.4"
-  },
-  "private": true
+	"name": "victoria-morais-portfolio",
+	"version": "1.0.0",
+	"description": "A portfolio containing Victoria Morais' work as a Designer",
+	"homepage": "https://victoriamorais.design",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/eduardobasso/victoria-morais-portfolio.git"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"format": "prettier --check --ignore-path .gitignore .",
+		"format:fix": "prettier --write --ignore-path .gitignore ."
+	},
+	"dependencies": {
+		"@emotion/react": "11.10.0",
+		"@emotion/styled": "11.10.0",
+		"@mui/material": "5.15.9",
+		"next": "12.2.5",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-scroll-parallax": "3.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "17.0.21",
+		"@types/react": "18.0.17",
+		"eslint": "8.22.0",
+		"eslint-config-next": "12.2.5",
+		"eslint-config-prettier": "9.1.0",
+		"prettier": "3.3.1",
+		"sass": "1.54.4",
+		"typescript": "4.7.4"
+	},
+	"private": true
 }
