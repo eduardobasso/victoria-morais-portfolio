@@ -32,7 +32,7 @@ function PageNavbar() {
               '&:hover': {
                 bgcolor: alpha(theme.palette.common.white, .3),
               },
-            })} href="/documents/resume-victoria-morais-santos.pdf" target="_blank">
+            })} href="/documents/resume-victoria-morais-santos-20240609.pdf" target="_blank">
               {`Resume`}
             </Button>
             <Button color="inherit" sx={(theme) => ({

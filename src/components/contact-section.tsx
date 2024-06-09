@@ -29,19 +29,6 @@ function ContactSection() {
             <List>
               <ListItem>
                 <ListItemIcon sx={{ color: 'inherit' }}>
-                  <WhatsAppOutlined />
-                </ListItemIcon>
-                <ListItemText primaryTypographyProps={{
-                  variant: 'body2',
-                  fontWeight: 500,
-                }}>
-                  <Link color="inherit" href="https://wa.me/351926220332" target="_blank" underline="hover">
-                    {`+351 926 220 332`}
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemIcon sx={{ color: 'inherit' }}>
                   <EmailOutlined />
                 </ListItemIcon>
                 <ListItemText primaryTypographyProps={{
