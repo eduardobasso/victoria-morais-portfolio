@@ -432,7 +432,7 @@ const BrastempExperience: NextPage = () => {
                                                                 <TableRow>
                                                                     <TableCell
                                                                         sx={{
-                                                                            maxWidth: 108,
+                                                                            maxWidth: 118,
                                                                             py: 1,
                                                                             px: 0.75,
                                                                             textAlign: 'center',
