@@ -8,6 +8,16 @@ function WorkSection() {
             <Container>
                 <Stack spacing={8.5} mt={7.25}>
                     <ProjectCard
+                        company={`AMA (Agência Modernizadora Administrativa)`}
+                        title={`Accessibility validatons`}
+                        description={`Auditing websites and applications to ensuring the standards for the Portugal Seal of Accessibility and Usability`}
+                        role={`Accessibility and Usability Auditor`}
+                        imgSrc="/images/projects/accessibility-validations/thumb.png"
+                        imgAlt={`AMA cover`}
+                        imgPos="left"
+                        confidential
+                    />
+                    <ProjectCard
                         company={`Whirlpool`}
                         title={`Brastemp Experience`}
                         description={`How we improved the service and made the searching process for technical assistance more efficient`}
@@ -33,7 +43,7 @@ function WorkSection() {
                         company={`UX/UI trial work`}
                         title={`Vupt`}
                         description={`A new way of tracking orders in an e-commerce experience. A solution where buyers can choose when they will receive their orders`}
-                        role={`Product Designer | UX Research`}
+                        role={`Product Designer | UX Researcher`}
                         imgSrc="/images/projects/vupt/cover.png"
                         imgAlt={`Vupt cover`}
                         imgPos="right"
