@@ -3,6 +3,7 @@ import type { Theme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import PasswordModal from './password-modal';
+import WorkInProgressModal from './work-in-progress-modal';
 
 type TProjectCardProps = {
     company: string;
@@ -12,7 +13,7 @@ type TProjectCardProps = {
     imgSrc: string;
     imgAlt: string;
     imgPos?: 'right' | 'left';
-    route: string;
+    route?: string;
     confidential?: boolean;
 };
 
@@ -27,31 +28,42 @@ function ProjectCard({
     route,
     confidential,
 }: TProjectCardProps) {
-    const [validating, setValidating] = useState<boolean>(false);
-
-    const openModal = () => {
-        setValidating(true);
-    };
-
-    const closeModal = () => {
-        setValidating(false);
-    };
-
     const router = useRouter();
 
     const enterRoute = () => {
-        router.push(route);
+        if (route) router.push(route);
+    };
+
+    const [validating, setValidating] = useState<boolean>(false);
+    const [progressing, setProgressing] = useState<boolean>(false);
+
+    const openPasswordModal = () => {
+        setValidating(true);
+    };
+
+    const closePasswordModal = () => {
+        setValidating(false);
     };
 
     const validateBeforeEnter = () => {
         const password = sessionStorage.getItem('VicMSA-pwd');
 
         if (confidential && password === null) {
-            openModal();
+            openPasswordModal();
         } else {
             enterRoute();
         }
     };
+
+    const openWipModal = () => {
+        setProgressing(true);
+    };
+
+    const closeWipModal = () => {
+        setProgressing(false);
+    };
+
+    const workInProgress = route === undefined;
 
     return (
         <>
@@ -94,13 +106,13 @@ function ProjectCard({
                             },
                             [theme.breakpoints.up('md')]: {
                                 '& > div': {
-                                    pr: imgPos === 'right' ? 16.5 : 4,
-                                    pl: imgPos === 'right' ? 4 : 16.5,
+                                    pr: imgPos === 'right' ? 16.5 : 3,
+                                    pl: imgPos === 'left' ? 16.5 : 3,
                                 },
                             },
                         },
                     })}
-                    onClick={validateBeforeEnter}
+                    onClick={workInProgress ? openWipModal : validateBeforeEnter}
                 >
                     <CardContent
                         sx={(theme: Theme) => ({
@@ -152,8 +164,9 @@ function ProjectCard({
                 </CardActionArea>
             </Card>
             {confidential && validating && (
-                <PasswordModal open={validating} onClose={closeModal} onConfirm={enterRoute} />
+                <PasswordModal open={validating} onClose={closePasswordModal} onConfirm={enterRoute} />
             )}
+            {workInProgress && progressing && <WorkInProgressModal open={progressing} onClose={closeWipModal} />}
         </>
     );
 }

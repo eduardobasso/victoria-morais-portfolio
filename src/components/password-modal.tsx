@@ -82,20 +82,14 @@ function PasswordModal({ open, onClose, onConfirm }: TPasswordModalProps) {
                     <Close />
                 </IconButton>
             </Box>
-            <DialogContent
-                sx={{
-                    pt: 9.5,
-                    px: 6,
-                    pb: 14,
-                }}
-            >
+            <DialogContent sx={{ pt: 9.5, px: 6, pb: 14 }}>
                 <Box display="flex" alignItems="center" justifyContent="space-between">
                     <Typography variant="h5" fontWeight={700}>
                         {`Confidential information`}
                     </Typography>
                 </Box>
                 <Typography variant="subtitle1" color="textPrimary" mt={4} mb={5}>
-                    {`This case contains private information. Don't worry if you don't have the password; I'll be glad to meet you and show you my work 😃`}
+                    {`This case contains private information. If you don't have the password, I'll be glad to meet you and show you my work 😃`}
                 </Typography>
                 <form id={`formModalPassword`} noValidate autoComplete="off" onSubmit={confirm}>
                     <Grid container spacing={3}>
@@ -111,9 +105,7 @@ function PasswordModal({ open, onClose, onConfirm }: TPasswordModalProps) {
                                             <Button
                                                 color="secondary"
                                                 size="small"
-                                                sx={{
-                                                    fontSize: 12,
-                                                }}
+                                                sx={{ fontSize: 12 }}
                                                 onClick={togglePasswordVisibility}
                                             >
                                                 {showPassword ? `Hide` : `Show`}
@@ -135,12 +127,7 @@ function PasswordModal({ open, onClose, onConfirm }: TPasswordModalProps) {
                                 type="submit"
                                 variant="contained"
                                 fullWidth
-                                sx={{
-                                    minHeight: 56,
-                                    px: 4,
-                                    py: 1,
-                                    textTransform: 'none',
-                                }}
+                                sx={{ minHeight: 56, px: 4, py: 1, textTransform: 'none' }}
                                 endIcon={<ArrowForward />}
                                 id={`btnModalOpenCase`}
                                 disabled={passwordIsEmpty}
