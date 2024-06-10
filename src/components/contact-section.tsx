@@ -1,15 +1,4 @@
-import {
-    Box,
-    Container,
-    Grid,
-    Link,
-    List,
-    ListItem,
-    ListItemIcon,
-    ListItemText,
-    Stack,
-    Typography,
-} from '@mui/material';
+import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material';
 import { EmailOutlined, LinkedIn } from './custom-icons';
 
 function ContactSection() {
@@ -48,9 +37,7 @@ function ContactSection() {
                                         fontWeight: 500,
                                     }}
                                 >
-                                    <Link color="inherit" href="mailto:victoria.morais.sa@gmail.com" underline="hover">
-                                        {`victoria.morais.sa@gmail.com`}
-                                    </Link>
+                                    {`victoria.morais.sa@gmail.com`}
                                 </ListItemText>
                             </ListItem>
                             <ListItem>
@@ -63,14 +50,7 @@ function ContactSection() {
                                         fontWeight: 500,
                                     }}
                                 >
-                                    <Link
-                                        color="inherit"
-                                        href="https://www.linkedin.com/in/victoria-morais/"
-                                        target="_blank"
-                                        underline="hover"
-                                    >
-                                        {`linkedin.com/in/victoria-morais`}
-                                    </Link>
+                                    {`linkedin.com/in/victoria-morais`}
                                 </ListItemText>
                             </ListItem>
                         </List>

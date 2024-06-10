@@ -27,8 +27,11 @@ function ProfileSection() {
                                 <Typography variant="h3" fontWeight={700} mb={3}>
                                     {`I'm Victoria Morais`}
                                 </Typography>
-                                <Typography variant="body1" fontWeight={300} mb={2.25}>
-                                    {`I'm a Designer based in Portugal with UX/UI and product skills with more than 5 years of experience. I'm currently working at Tangível and my objective is to contribute with my knowledge and skills to deliver the best solution for business and people's needs.`}
+                                <Typography variant="body1" fontWeight={300} mb={2}>
+                                    {`I'm a designer based in Portugal who started working with technology as a Developer and through this 6 years of experience I've learned about User Experience, Usability and Accessibility.`}
+                                </Typography>
+                                <Typography variant="body1" fontWeight={300} mb={3}>
+                                    {`I'm currently working at Tangível allocated at AMA as an Auditor, ensuring websites and applications standards for the Portuguese Usability and Accessibility Seal.`}
                                 </Typography>
                                 <Grid container spacing={4}>
                                     <Grid item xs={12} sm="auto">
@@ -51,7 +54,7 @@ function ProfileSection() {
                                         <Box display="flex" alignItems="center" gap={1.25}>
                                             <Muscle sx={{ fontSize: 18 }} />
                                             <Typography variant="body2" fontWeight={500}>
-                                                {`UX/UI Design`}
+                                                {`Usability & Accessibility`}
                                             </Typography>
                                         </Box>
                                     </Grid>
