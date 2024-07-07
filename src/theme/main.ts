@@ -1,32 +1,36 @@
 import type { ThemeOptions } from '@mui/material/styles';
+import breakpoints from './config/breakpoints';
+import components from './config/components';
 import typography from './config/typography';
 
 const themeOptions: ThemeOptions = {
+    breakpoints,
+    components,
     palette: {
         mode: 'light',
         common: {
-            black: '#242424',
+            black: '#141414',
             white: '#fff',
         },
         primary: {
-            main: '#f55d2f',
-            light: '#ff8f5c',
-            dark: '#bb2800',
-            contrastText: '#fff',
+            main: '#141414',
+            light: '#4f4f4f',
+            dark: '#010101',
+            contrastText: '#eee',
         },
         secondary: {
-            main: '#f55d2f',
-            light: '#ff8f5c',
-            dark: '#bb2800',
+            main: '#700bd5',
+            light: '#bb86fc',
+            dark: '#3400a2',
             contrastText: '#fff',
         },
         text: {
-            primary: '#242424',
+            primary: '#141414',
             secondary: '#4f4f4f',
         },
-        divider: '#e5e5e5',
+        divider: '#7c7c7c',
         background: {
-            paper: '#f9f9f9',
+            paper: '#fff',
             default: '#fff',
         },
     },

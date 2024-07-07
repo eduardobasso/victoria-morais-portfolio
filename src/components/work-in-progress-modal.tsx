@@ -9,8 +9,8 @@ import {
     ListItemText,
     Typography,
     useMediaQuery,
+    useTheme,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import { Close, EmailOutlined, LinkedIn } from './custom-icons';
 
 type TWorkInProgressModalProps = {
@@ -28,20 +28,16 @@ function WorkInProgressModal({ open, onClose }: TWorkInProgressModalProps) {
     return (
         <Dialog open={open} onClose={close} fullScreen={fullScreen}>
             <Box position="absolute" top={12} right={12}>
-                <IconButton color="primary" id={`btnModalClose`} onClick={close}>
+                <IconButton color="primary" id={`btnCloseWipModal`} onClick={close}>
                     <Close />
                 </IconButton>
             </Box>
             <DialogContent sx={{ pt: 9.5, px: 6, pb: 11.5 }}>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
-                    <Typography variant="h5" fontWeight={700}>
-                        {`Work in progress`}
-                    </Typography>
-                </Box>
-                <Typography variant="subtitle1" color="textPrimary" mt={4} mb={3.75}>
-                    {`This is a work in progress. But no need to worry, I'll be glad to meet you and show you a preview of my work 😃`}
+                <Typography variant="h5" mb={4}>{`Work in progress`}</Typography>
+                <Typography variant="body1" fontWeight={500} mb={3.75}>
+                    {`This is a work in progress. But no need to worry, I'll be glad to meet you and show you a preview of my work.`}
                 </Typography>
-                <Typography variant="subtitle1" color="textPrimary" mb={0.5}>
+                <Typography variant="body1" fontWeight={500} mb={0.5}>
                     {`You can find me here:`}
                 </Typography>
                 <List>
@@ -51,8 +47,7 @@ function WorkInProgressModal({ open, onClose }: TWorkInProgressModalProps) {
                         </ListItemIcon>
                         <ListItemText
                             primaryTypographyProps={{
-                                variant: 'body2',
-                                fontWeight: 500,
+                                variant: 'button',
                             }}
                         >
                             {`victoria.morais.sa@gmail.com`}
@@ -64,8 +59,7 @@ function WorkInProgressModal({ open, onClose }: TWorkInProgressModalProps) {
                         </ListItemIcon>
                         <ListItemText
                             primaryTypographyProps={{
-                                variant: 'body2',
-                                fontWeight: 500,
+                                variant: 'button',
                             }}
                         >
                             {`linkedin.com/in/victoria-morais`}

@@ -1,38 +1,29 @@
-import { ThemeOptions } from '@mui/material/styles';
-import components from './config/components';
-import typography from './config/typography';
 
-const theme: ThemeOptions = {
-    components,
-    palette: {
-        mode: 'light',
-        common: {
-            black: '#242424',
-            white: '#fff',
-        },
-        primary: {
-            main: '#242424',
-            light: '#4c4c4c',
-            dark: '#010101',
-            contrastText: '#fff',
-        },
-        secondary: {
-            main: '#700bd5',
-            light: '#a74aff',
-            dark: '#3400a2',
-            contrastText: '#fff',
-        },
-        text: {
-            primary: '#1a1b1f',
-            secondary: '#7c7c7c',
-        },
-        divider: '#7c7c7c',
-        background: {
-            paper: '#f9f9f9',
-            default: '#fff',
-        },
-    },
-    typography,
+import { createTheme, responsiveFontSizes, type ThemeOptions } from '@mui/material/styles';
+import brastempThemeOptions from './brastemp';
+import gamaAcademyThemeOptions from './gama-academy';
+import mainThemeOptions from './main';
+
+export type ThemeNames = 'brastemp' | 'gamaAcademy';
+
+export function getPageTheme(themeName?: ThemeNames) {
+    let options: ThemeOptions;
+
+    switch (themeName) {
+        case 'brastemp':
+            options = brastempThemeOptions;
+            break;
+        case 'gamaAcademy':
+            options = gamaAcademyThemeOptions;
+            break;
+        default:
+            options = mainThemeOptions;
+    }
+
+    return responsiveFontSizes(createTheme(options));
+
 };
 
-export default theme;
+export function getAppTheme() {
+    return getPageTheme();
+}

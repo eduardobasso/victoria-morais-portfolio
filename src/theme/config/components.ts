@@ -1,12 +1,14 @@
-import { Components } from '@mui/material/styles';
+import type { Components, Theme } from '@mui/material/styles';
 
-const components: Components = {
+const components: Components<Theme> = {
     MuiToolbar: {
         styleOverrides: {
-            root: {
-                minHeight: 88,
-                fontSize: 20,
-            },
+            root: ({ theme }) => ({
+                fontSize: 18,
+                [theme.breakpoints.up('sm')]: {
+                    minHeight: 87,
+                },
+            }),
         },
     },
 };

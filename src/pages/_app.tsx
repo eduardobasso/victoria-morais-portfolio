@@ -1,12 +1,9 @@
-import { CssBaseline } from '@mui/material';
-import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import type { AppProps } from 'next/app';
-import theme from '../theme';
-
-let appTheme = createTheme(theme);
-appTheme = responsiveFontSizes(appTheme);
+import { getAppTheme } from '../theme';
 
 function App({ Component, pageProps }: AppProps) {
+    const appTheme = getAppTheme();
     return (
         <ThemeProvider theme={appTheme}>
             <CssBaseline />

@@ -5,146 +5,118 @@ import {
     Container,
     IconButton,
     Link,
-    Slide,
     Toolbar,
     Tooltip,
     Typography,
-    useScrollTrigger,
     Zoom,
+    alpha,
+    useTheme,
 } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 import { useRouter } from 'next/router';
-import { GitHub, LinkedInCircle, MediumCircle } from './custom-icons';
+import { GitHub, LinkedIn } from './custom-icons';
 
-function PageNavbar() {
+type PageNavbarProps = {
+    lightMode?: boolean;
+};
+
+function PageNavbar({ lightMode }: PageNavbarProps) {
     const router = useRouter();
-    const scrolled = useScrollTrigger();
+    const theme = useTheme();
+
+    const bgcolor = lightMode ? theme.palette.background.default : theme.palette.primary.main;
+    const color = lightMode ? theme.palette.text.primary : theme.palette.primary.contrastText;
+    const hoverBgcolor = lightMode ? alpha(color, 0.04) : alpha(color, 0.12);
 
     return (
-        <Slide appear={false} direction="down" in={!scrolled}>
-            <AppBar
-                position="sticky"
-                elevation={scrolled ? 4 : 0}
-                sx={({
-                    palette: {
-                        common: { black, white },
-                    },
-                }) => ({
-                    bgcolor: black,
-                    color: white,
-                })}
-            >
-                <Toolbar component={Container}>
-                    <Box flexGrow={1}>
-                        <Link display="inline-block" variant="body1" color="inherit" href="/" underline="hover">
-                            <Typography component="h1" fontWeight={700} textTransform="uppercase">
-                                {`Portfolio`}
-                            </Typography>
-                        </Link>
-                    </Box>
-                    <Box component="nav" mr={-1.75}>
-                        <Button
-                            color="inherit"
-                            sx={(theme) => ({
-                                mr: 0.75,
-                                ml: 0.75,
-                                '&:hover': {
-                                    bgcolor: alpha(theme.palette.common.white, 0.3),
-                                },
-                            })}
-                            href="/documents/resume-victoria-morais-santos-20240609.pdf"
-                            target="_blank"
-                        >
+        <AppBar position="relative" elevation={0} sx={{ bgcolor, color }}>
+            <Toolbar component={Container} sx={{ minHeight: 87 }}>
+                <Box flexGrow={1}>
+                    <Link href="/" variant="subtitle1" color="inherit" underline="hover" display="inline-block">
+                        <Typography component="h1" fontWeight={700} textTransform="uppercase">
+                            {`Portfolio`}
+                        </Typography>
+                    </Link>
+                </Box>
+                <Box component="nav" mr={-1.75}>
+                    <Button
+                        color="inherit"
+                        sx={{
+                            mr: 0.75,
+                            ml: 0.75,
+                            '&:hover': { bgcolor: hoverBgcolor },
+                        }}
+                        href="/documents/resume-victoria-morais-santos-20240609.pdf"
+                        target="blank"
+                    >
+                        <Typography component="span" variant="subtitle2">
                             {`Resume`}
-                        </Button>
-                        <Button
-                            color="inherit"
-                            sx={(theme) => ({
-                                mr: 0.75,
-                                ml: 0.75,
-                                '&:hover': {
-                                    bgcolor: alpha(theme.palette.common.white, 0.3),
-                                },
-                            })}
-                            onClick={() => {
-                                router.push('/work');
-                            }}
-                        >
-                            {`Work`}
-                        </Button>
-                        <Button
-                            color="inherit"
-                            sx={(theme) => ({
-                                mr: 0.75,
-                                ml: 0.75,
-                                '&:hover': {
-                                    bgcolor: alpha(theme.palette.common.white, 0.3),
-                                },
-                            })}
-                            onClick={() => {
-                                router.push('/contact');
-                            }}
-                        >
+                        </Typography>
+                    </Button>
+                    <Button
+                        color="inherit"
+                        sx={{
+                            mr: 0.75,
+                            ml: 0.75,
+                            '&:hover': { bgcolor: hoverBgcolor },
+                        }}
+                        onClick={() => {
+                            router.push('/work');
+                        }}
+                    >
+                        <Typography component="span" variant="subtitle2">
+                            {`My work`}
+                        </Typography>
+                    </Button>
+                    <Button
+                        color="inherit"
+                        sx={{
+                            mr: 0.75,
+                            ml: 0.75,
+                            '&:hover': { bgcolor: hoverBgcolor },
+                        }}
+                        onClick={() => {
+                            router.push('/contact');
+                        }}
+                    >
+                        <Typography component="span" variant="subtitle2">
                             {`Contact`}
-                        </Button>
-                        <Tooltip title="Medium" TransitionComponent={Zoom}>
-                            <IconButton
-                                color="inherit"
-                                href="https://medium.com/@moraes_victoria"
-                                target="_blank"
-                                sx={(theme) => ({
-                                    mr: 0.75,
-                                    ml: 0.75,
-                                    '&:hover': {
-                                        bgcolor: alpha(theme.palette.common.white, 0.3),
-                                    },
-                                })}
-                                aria-label="View profile on Medium"
-                                id="btnMedium"
-                            >
-                                <MediumCircle />
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title="GitHub" TransitionComponent={Zoom}>
-                            <IconButton
-                                color="inherit"
-                                href="https://github.com/victoriamorais"
-                                target="_blank"
-                                sx={(theme) => ({
-                                    mr: 0.75,
-                                    ml: 0.75,
-                                    '&:hover': {
-                                        bgcolor: alpha(theme.palette.common.white, 0.3),
-                                    },
-                                })}
-                                aria-label="View profile on GitHub"
-                                id="btnGitHub"
-                            >
-                                <GitHub />
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title="LinkedIn" TransitionComponent={Zoom}>
-                            <IconButton
-                                color="inherit"
-                                href="https://www.linkedin.com/in/victoria-morais/"
-                                target="_blank"
-                                sx={(theme) => ({
-                                    mr: 0.75,
-                                    ml: 0.75,
-                                    '&:hover': {
-                                        bgcolor: alpha(theme.palette.common.white, 0.3),
-                                    },
-                                })}
-                                aria-label="View profile on LinkedIn"
-                                id="btnLinkedIn"
-                            >
-                                <LinkedInCircle />
-                            </IconButton>
-                        </Tooltip>
-                    </Box>
-                </Toolbar>
-            </AppBar>
-        </Slide>
+                        </Typography>
+                    </Button>
+                    <Tooltip title="LinkedIn" TransitionComponent={Zoom}>
+                        <IconButton
+                            color="inherit"
+                            href="https://www.linkedin.com/in/victoria-morais/"
+                            target="blank"
+                            sx={{
+                                mr: 0.75,
+                                ml: 0.75,
+                                '&:hover': { bgcolor: hoverBgcolor },
+                            }}
+                            aria-label="View profile on LinkedIn"
+                            id="btnLinkedIn"
+                        >
+                            <LinkedIn />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="GitHub" TransitionComponent={Zoom}>
+                        <IconButton
+                            color="inherit"
+                            href="https://github.com/victoriamorais"
+                            target="blank"
+                            sx={{
+                                mr: 0.75,
+                                ml: 0.75,
+                                '&:hover': { bgcolor: hoverBgcolor },
+                            }}
+                            aria-label="View profile on GitHub"
+                            id="btnGitHub"
+                        >
+                            <GitHub />
+                        </IconButton>
+                    </Tooltip>
+                </Box>
+            </Toolbar>
+        </AppBar>
     );
 }
 

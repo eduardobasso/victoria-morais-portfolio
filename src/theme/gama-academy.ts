@@ -1,7 +1,7 @@
-import { ThemeOptions } from '@mui/material/styles';
+import type { ThemeOptions } from '@mui/material/styles';
 import typography from './config/typography';
 
-const theme: ThemeOptions = {
+const themeOptions: ThemeOptions = {
     palette: {
         mode: 'light',
         common: {
@@ -33,4 +33,4 @@ const theme: ThemeOptions = {
     typography,
 };
 
-export default theme;
+export default themeOptions;

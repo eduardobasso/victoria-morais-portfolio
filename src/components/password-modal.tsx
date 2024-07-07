@@ -78,17 +78,15 @@ function PasswordModal({ open, onClose, onConfirm }: TPasswordModalProps) {
     return (
         <Dialog open={open} onClose={close} fullScreen={fullScreen}>
             <Box position="absolute" top={12} right={12}>
-                <IconButton color="primary" id={`btnModalClose`} onClick={close}>
+                <IconButton color="primary" id={`btnClosePasswordModal`} onClick={close}>
                     <Close />
                 </IconButton>
             </Box>
             <DialogContent sx={{ pt: 9.5, px: 6, pb: 14 }}>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
-                    <Typography variant="h5" fontWeight={700}>
-                        {`Confidential information`}
-                    </Typography>
-                </Box>
-                <Typography variant="subtitle1" color="textPrimary" mt={4} mb={5}>
+                <Typography variant="h5" mb={4}>
+                    {`Confidential information`}
+                </Typography>
+                <Typography variant="body1" fontWeight={500} mt={4} mb={5}>
                     {`This case contains private information. If you don't have the password, I'll be glad to meet you and show you my work 😃`}
                 </Typography>
                 <form id={`formModalPassword`} noValidate autoComplete="off" onSubmit={confirm}>

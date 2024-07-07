@@ -1,11 +1,24 @@
-import { Box, Container, Stack } from '@mui/material';
+import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import ProjectCard from './project-card';
 
 function WorkSection() {
     return (
-        <Box component="section" my={6.5}>
-            <h3 hidden>{`Work`}</h3>
+        <Box
+            component="section"
+            sx={{
+                bgcolor: 'primary.main',
+                pt: 6.5,
+                pb: 19.5,
+                color: 'primary.contrastText',
+            }}
+        >
+            <h2 hidden>{`My work`}</h2>
             <Container>
+                <Grid container alignItems="center" justifyContent="center">
+                    <Grid item xs={12} sm={11} md={10} lg={9} xl={8}>
+                        <Typography component="p" variant="h2" mb={4.5}>{`Here are my favorite projects`}</Typography>
+                    </Grid>
+                </Grid>
                 <Stack spacing={8.5} mt={7.25}>
                     <ProjectCard
                         company={`AMA (Agência Modernizadora Administrativa)`}

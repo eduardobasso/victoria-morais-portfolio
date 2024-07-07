@@ -1,12 +1,10 @@
 import type { NextPage } from 'next';
-import InnerHeading from '../../components/inner-heading';
 import PageWrapper from '../../components/page-wrapper';
 import WorkSection from '../../components/work-section';
 
 const Work: NextPage = () => {
     return (
-        <PageWrapper title={`Work`}>
-            <InnerHeading text={`My work`} />
+        <PageWrapper title={`My work`}>
             <WorkSection />
         </PageWrapper>
     );

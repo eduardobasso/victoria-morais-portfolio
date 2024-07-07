@@ -1,4 +1,4 @@
-import { BreakpointsOptions } from '@mui/material/styles';
+import type { BreakpointsOptions } from '@mui/material/styles';
 
 const breakpoints: BreakpointsOptions = {
     values: {

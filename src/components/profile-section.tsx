@@ -1,5 +1,4 @@
-import { Avatar, Box, Container, Grid, Stack, Typography } from '@mui/material';
-import { Books, Hearts, ILoveYouHandSign, Muscle } from './custom-emojis';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
 function ProfileSection() {
     return (
@@ -7,73 +6,35 @@ function ProfileSection() {
             component="section"
             sx={{
                 bgcolor: 'primary.main',
-                pt: 6,
-                pb: 8,
+                pt: 12.125,
+                pb: 9.25,
                 color: 'primary.contrastText',
             }}
         >
             <h2 hidden>{`Profile`}</h2>
             <Container>
-                <Grid container spacing={3} alignItems="stretch" justifyContent="space-between" minHeight="60vh">
-                    <Grid item xs={12} sm={7} lg={6}>
-                        <Stack spacing={3} height="100%">
-                            <Stack flexGrow={1} justifyContent="center">
-                                <Box display="flex" alignItems="center" gap={2} mb={0.75}>
-                                    <Typography variant="h3" fontWeight={700}>
-                                        {`Hello!`}
-                                    </Typography>
-                                    <ILoveYouHandSign sx={{ fontSize: 48 }} />
-                                </Box>
-                                <Typography variant="h3" fontWeight={700} mb={3}>
-                                    {`I'm Victoria Morais`}
-                                </Typography>
-                                <Typography variant="body1" fontWeight={300} mb={2}>
-                                    {`I'm a designer based in Portugal who started working with technology as a Developer and through this 6 years of experience I've learned about User Experience, Usability and Accessibility.`}
-                                </Typography>
-                                <Typography variant="body1" fontWeight={300} mb={3}>
-                                    {`I'm currently working at Tangível allocated at AMA as an Auditor, ensuring websites and applications standards for the Portuguese Usability and Accessibility Seal.`}
-                                </Typography>
-                                <Grid container spacing={4}>
-                                    <Grid item xs={12} sm="auto">
-                                        <Box display="flex" alignItems="center" gap={1.5}>
-                                            <Hearts sx={{ fontSize: 18 }} />
-                                            <Typography variant="body2" fontWeight={500}>
-                                                {`Product Discovery`}
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item xs={12} sm="auto">
-                                        <Box display="flex" alignItems="center" gap={1.5}>
-                                            <Books sx={{ fontSize: 18 }} />
-                                            <Typography variant="body2" fontWeight={500}>
-                                                {`UX Research`}
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item xs={12} sm="auto">
-                                        <Box display="flex" alignItems="center" gap={1.25}>
-                                            <Muscle sx={{ fontSize: 18 }} />
-                                            <Typography variant="body2" fontWeight={500}>
-                                                {`Usability & Accessibility`}
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                </Grid>
-                            </Stack>
-                        </Stack>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg="auto" alignSelf="center">
-                        <Avatar
-                            variant="square"
-                            src="/images/profile-picture.png"
-                            alt="Victoria's profile picture"
-                            sx={{
-                                width: '100%',
-                                maxWidth: 410,
-                                height: 'auto',
-                                maxHeight: 456,
-                            }}
-                        />
+                <Grid container alignItems="center" justifyContent="center">
+                    <Grid item xs={12} sm={11} md={10} lg={9} xl={8}>
+                        <Typography component="p" variant="h1" mb={5.5}>
+                            <Typography component="span" variant="inherit">{`A designer with `}</Typography>
+                            <Typography component="span" variant="inherit" color="secondary.light">
+                                {`UX/UI`}
+                            </Typography>
+                            <Typography component="span" variant="inherit">{` and `}</Typography>
+                            <Typography component="span" variant="inherit" color="secondary.light">
+                                {`accessibility`}
+                            </Typography>
+                            <Typography
+                                component="span"
+                                variant="inherit"
+                            >{` skills focused on delivering the best solutions for business and user needs`}</Typography>
+                        </Typography>
+                        <Typography component="p" variant="body1" mb={2.5}>
+                            {`Hi, I'm Victoria Morais, a designer based in Portugal who started working with technology as a developer and through this 6 years of experience have learned about User Experience, Usability and Accessibility.`}
+                        </Typography>
+                        <Typography component="p" variant="body1">
+                            {`I'm currently working at Tangível allocated at AMA as an auditor, ensuring websites and applications standards for the Portuguese Usability and Accessibility Seal.`}
+                        </Typography>
                     </Grid>
                 </Grid>
             </Container>
