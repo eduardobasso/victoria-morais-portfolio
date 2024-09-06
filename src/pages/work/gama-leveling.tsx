@@ -1,20 +1,10 @@
 import { Box, Container, Grid, Link, Paper, Stack, Typography } from '@mui/material';
 import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 import ContentNavbar from '../../components/content-navbar';
 import PageWrapper from '../../components/page-wrapper';
 import ProjectCover from '../../components/project-cover';
 
 const SkillAssessment: NextPage = () => {
-    const router = useRouter();
-
-    useEffect(() => {
-        if (sessionStorage.getItem('VicMSA-pwd') === null) {
-            router.push('/work');
-        }
-    });
-
     return (
         <PageWrapper title={`Gama leveling`} theme="gamaAcademy" lightNavbar>
             <h2 hidden>{`Work`}</h2>
