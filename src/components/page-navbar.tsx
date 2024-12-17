@@ -45,7 +45,7 @@ function PageNavbar({ lightMode }: PageNavbarProps) {
                             ml: 0.75,
                             '&:hover': { bgcolor: hoverBgcolor },
                         }}
-                        href="/documents/resume-victoria-morais-santos-20240609.pdf"
+                        href="/documents/resume-victoria-morais-santos-20241217.pdf"
                         target="blank"
                     >
                         <Typography component="span" variant="subtitle2">
