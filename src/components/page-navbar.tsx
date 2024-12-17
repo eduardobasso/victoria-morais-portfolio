@@ -52,7 +52,7 @@ function PageNavbar() {
                                     bgcolor: alpha(theme.palette.common.white, 0.3),
                                 },
                             })}
-                            href="/documents/resume-victoria-morais-santos-20241217.pdf"
+                            href="/documents/resume-victoria-morais-santos-20241217-2.pdf"
                             target="_blank"
                         >
                             {`Resume`}
