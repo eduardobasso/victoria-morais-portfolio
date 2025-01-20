@@ -28,7 +28,7 @@ function ProfileSection() {
                                     {`I'm Victoria Morais`}
                                 </Typography>
                                 <Typography variant="body1" fontWeight={300} mb={2}>
-                                    {`I'm a designer based in Portugal who started working with technology as a Developer and through this 6 years of experience I've learned about User Experience, Usability and Accessibility.`}
+                                    {`I'm a designer based in Portugal who started working with technology as a Developer and through this 8 years of experience I've learned about User Experience, Usability and Accessibility.`}
                                 </Typography>
                                 <Typography variant="body1" fontWeight={300} mb={3}>
                                     {`I'm currently working at Tangível allocated at AMA as an Auditor, ensuring websites and applications standards for the Portuguese Usability and Accessibility Seal.`}
