@@ -4,30 +4,45 @@
 
 ## Setup
 
-### Install packages:
+### Prerequisites
+
+#### Use NVM to install the correct Node version
+
+```
+nvm install 22
+nvm use 22
+```
+
+#### Install yarn
+
+```
+npm install -g yarn
+```
+
+### Install dependencies packages
 
 ```
 yarn
 ```
 
-#### Add a package:
+#### Add a new package
 
 ```
 yarn add [-D] <package-name>
 ```
 
-#### Remove a package:
+#### Remove an existing package
 
 ```
 yarn remove <package-name>
 ```
 
-### Run development environment:
+### Run development environment
 
 ```
 yarn dev
 ```
 
-#### Environment variable
+#### Environment variables
 
 Add `NEXT_PUBLIC_DEFAULT_PASSWORD` to an `.env.local` file.
