@@ -1,15 +1,10 @@
-import { NextPage } from 'next';
-import PageWrapper from '../components/page-wrapper';
-import ProfileSection from '../components/profile-section';
-import WorkSection from '../components/work-section';
+import type { NextPage } from 'next';
+import { PageWrapper } from '../components';
 
-const Index: NextPage = () => {
-    return (
-        <PageWrapper>
-            <ProfileSection />
-            <WorkSection />
-        </PageWrapper>
-    );
-};
+const Index: NextPage = () => (
+  <PageWrapper>
+    <p>This is the content for the index page.</p>
+  </PageWrapper>
+);
 
 export default Index;
