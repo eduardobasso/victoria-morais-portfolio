@@ -30,4 +30,4 @@ yarn dev
 
 #### Environment variable
 
-Add `NEXT_PUBLIC_DEFAULT_PASSWORD` to a `.env.local` file.
+Add `NEXT_PUBLIC_DEFAULT_PASSWORD` to an `.env.local` file.
