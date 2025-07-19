@@ -28,27 +28,40 @@ function PageNavbar({ lightMode }: PageNavbarProps) {
     const hoverBgcolor = lightMode ? alpha(color, 0.04) : alpha(color, 0.12);
 
     return (
-        <AppBar position="relative" elevation={0} sx={{ bgcolor, color }}>
-            <Toolbar component={Container} sx={{ minHeight: 87 }}>
-                <Box flexGrow={1}>
-                    <Link href="/" variant="subtitle1" color="inherit" underline="hover" display="inline-block">
-                        <Typography component="h1" fontWeight={700} textTransform="uppercase">
-                            {`Portfolio`}
-                        </Typography>
-                    </Link>
-                </Box>
-                <Box component="nav" mr={-1.75}>
-                    <Button
-                        color="inherit"
-                        sx={{
-                            mr: 0.75,
-                            ml: 0.75,
-                            '&:hover': { bgcolor: hoverBgcolor },
-                        }}
-                        href="/documents/resume-victoria-morais-santos-20241217.pdf"
-                        target="blank"
-                    >
-                        <Typography component="span" variant="subtitle2">
+        <Slide appear={false} direction="down" in={!scrolled}>
+            <AppBar
+                position="sticky"
+                elevation={scrolled ? 4 : 0}
+                sx={({
+                    palette: {
+                        common: { black, white },
+                    },
+                }) => ({
+                    bgcolor: black,
+                    color: white,
+                })}
+            >
+                <Toolbar component={Container}>
+                    <Box flexGrow={1}>
+                        <Link display="inline-block" variant="body1" color="inherit" href="/" underline="hover">
+                            <Typography component="h1" fontWeight={700} textTransform="uppercase">
+                                {`Portfolio`}
+                            </Typography>
+                        </Link>
+                    </Box>
+                    <Box component="nav" mr={-1.75}>
+                        <Button
+                            color="inherit"
+                            sx={(theme) => ({
+                                mr: 0.75,
+                                ml: 0.75,
+                                '&:hover': {
+                                    bgcolor: alpha(theme.palette.common.white, 0.3),
+                                },
+                            })}
+                            href="/documents/resume-victoria-morais-santos-20241217-2.pdf"
+                            target="_blank"
+                        >
                             {`Resume`}
                         </Typography>
                     </Button>
