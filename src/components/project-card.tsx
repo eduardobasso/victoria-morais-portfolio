@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from '@mui/material';
 import type { Theme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -15,6 +15,7 @@ type TProjectCardProps = {
     imgPos?: 'right' | 'left';
     route?: string;
     confidential?: boolean;
+    hiddenAt?: boolean;
 };
 
 function ProjectCard({
@@ -27,6 +28,7 @@ function ProjectCard({
     imgPos = 'right',
     route,
     confidential,
+    hiddenAt = false,
 }: TProjectCardProps) {
     const router = useRouter();
 
@@ -123,12 +125,21 @@ function ProjectCard({
                             },
                         })}
                     >
-                        <Typography variant="overline" color="text.secondary" fontWeight={500}>
-                            {company}
-                        </Typography>
-                        <Typography variant="h4" fontWeight={500} mb={3}>
-                            {title}
-                        </Typography>
+                        <Stack component="h3" spacing={0}>
+                            <Typography component="span" variant="h4" fontWeight={500}>
+                                {title}
+                            </Typography>
+                            <div>
+                                {!hiddenAt && (
+                                    <Typography component="span" variant="overline" color="text.secondary">
+                                        {`at `}
+                                    </Typography>
+                                )}
+                                <Typography component="span" variant="overline" color="text.secondary">
+                                    {company}
+                                </Typography>
+                            </div>
+                        </Stack>
                         <Typography variant="body1" fontWeight={300} mb={1.5}>
                             {description}
                         </Typography>

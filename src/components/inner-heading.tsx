@@ -7,7 +7,7 @@ type TInnerHeadingProps = {
 
 function InnerHeading({ text }: TInnerHeadingProps) {
     return (
-        <Box position="relative" mt={-0.125}>
+        <Box position="relative" mt={-0.125} aria-hidden="true">
             <Box color="common.black">
                 <Container>
                     <Box display="flex" alignItems="flex-end" gap={3}>

@@ -4,7 +4,7 @@ import PageWrapper from '../components/page-wrapper';
 
 const Contact: NextPage = () => {
     return (
-        <PageWrapper title={`Contact`}>
+        <PageWrapper title="Contact">
             <ContactSection />
         </PageWrapper>
     );

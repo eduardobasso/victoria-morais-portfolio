@@ -16,7 +16,11 @@ import { alpha } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import { GitHub, LinkedInCircle, MediumCircle } from './custom-icons';
 
-function PageNavbar() {
+type TPageNavbarProps = {
+    hasH1: boolean;
+};
+
+function PageNavbar({ hasH1 }: TPageNavbarProps) {
     const router = useRouter();
     const scrolled = useScrollTrigger();
 
@@ -37,7 +41,8 @@ function PageNavbar() {
                 <Toolbar component={Container}>
                     <Box flexGrow={1}>
                         <Link display="inline-block" variant="body1" color="inherit" href="/" underline="hover">
-                            <Typography component="h1" fontWeight={700} textTransform="uppercase">
+                            <Typography component={hasH1 ? 'h1' : 'span'} fontWeight={700} textTransform="uppercase">
+                                <span hidden>{`Victoria Morais' `}</span>
                                 {`Portfolio`}
                             </Typography>
                         </Link>

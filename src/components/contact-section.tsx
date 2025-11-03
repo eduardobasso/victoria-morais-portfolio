@@ -12,15 +12,15 @@ function ContactSection() {
                 color: 'primary.contrastText',
             }}
         >
-            <h2 hidden>{`Contact`}</h2>
+            <h1 hidden>{`Contact`}</h1>
             <Container>
                 <Grid container spacing={3} alignItems="center" justifyContent="space-between" minHeight="60vh">
                     <Grid item xs={12} md="auto">
-                        <Stack flexGrow={1} spacing={0.75} justifyContent="center">
-                            <Typography variant="h3" fontWeight={700}>
+                        <Stack component="h2" flexGrow={1} spacing={0.75} justifyContent="center">
+                            <Typography component="span" variant="h3" fontWeight={700}>
                                 {`Enjoy my work?`}
                             </Typography>
-                            <Typography variant="h3" fontWeight={700}>
+                            <Typography component="span" variant="h3" fontWeight={700}>
                                 {`Let's talk!`}
                             </Typography>
                         </Stack>

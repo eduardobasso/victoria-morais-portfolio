@@ -6,9 +6,9 @@ import WorkSection from '../components/work-section';
 
 const Index: NextPage = () => {
     return (
-        <PageWrapper>
+        <PageWrapper isHomePage>
             <ProfileSection />
-            <InnerHeading text={`My work`} />
+            <InnerHeading text="My work" />
             <WorkSection />
         </PageWrapper>
     );

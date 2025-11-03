@@ -4,23 +4,23 @@ import ProjectCard from './project-card';
 function WorkSection() {
     return (
         <Box component="section" my={6.5}>
-            <h3 hidden>{`Work`}</h3>
+            <h2 hidden>{`My work`}</h2>
             <Container>
                 <Stack spacing={8.5} mt={7.25}>
                     <ProjectCard
-                        company={`AMA (Agência Modernizadora Administrativa)`}
-                        title={`Accessibility validatons`}
-                        description={`Auditing websites and applications to ensuring the standards for the Portugal Seal of Accessibility and Usability`}
-                        role={`Accessibility and Usability Auditor`}
-                        imgSrc="/images/projects/accessibility-validations/thumb.png"
-                        imgAlt={`AMA cover`}
+                        company={`ARTE (Agência para Reforma Tecnológica do Estado)`}
+                        title={`Accessibility audits`}
+                        description={`Auditing websites and applications to ensuring the standards for the Portugal Seal of Accessibility and Usability.`}
+                        role={`Accessibility Auditor`}
+                        imgSrc="/images/projects/accessibility-audits/thumb.png"
+                        imgAlt={`ARTE cover`}
                         imgPos="left"
                         confidential
                     />
                     <ProjectCard
                         company={`Whirlpool`}
                         title={`Brastemp Experience`}
-                        description={`How we improved the service and made the searching process for technical assistance more efficient`}
+                        description={`Some of activities I participated working at Whirlpool's Brastemp brand improving the customer experience.`}
                         role={`Product Designer`}
                         imgSrc="/images/projects/brastemp-experience/thumb.png"
                         imgAlt={`Brastemp cover`}
@@ -30,9 +30,9 @@ function WorkSection() {
                     />
                     <ProjectCard
                         company={`Gama Academy`}
-                        title={`Gama leveling`}
-                        description={`An auto evaluation service to understand the student's profile and offer the best solution: a preparatory study content, an experience program or a learning path`}
-                        role={`UX/UI Designer`}
+                        title={`Skill Assessment`}
+                        description={`An auto evaluation service to understand the student's profile and offer the best solution: a preparatory study content, Experience program or Learning path.`}
+                        role={`Product Designer`}
                         imgSrc="/images/projects/gama-leveling/thumb.png"
                         imgAlt={`Gama leveling cover`}
                         imgPos="left"
@@ -40,15 +40,16 @@ function WorkSection() {
                         confidential
                     />
                     <ProjectCard
-                        company={`UX/UI trial work`}
+                        company={`Validation concept`}
                         title={`Vupt`}
-                        description={`A new way of tracking orders in an e-commerce experience. A solution where buyers can choose when they will receive their orders`}
+                        description={`A new way of tracking orders in e-commerce experience. A solution which buyers can choose when will receive their orders.`}
                         role={`Product Designer | UX Researcher`}
                         imgSrc="/images/projects/vupt/cover.png"
                         imgAlt={`Vupt cover`}
                         imgPos="right"
                         route="/documents/vupt-ux-trial-work.pdf"
                         confidential
+                        hiddenAt
                     />
                 </Stack>
             </Container>
