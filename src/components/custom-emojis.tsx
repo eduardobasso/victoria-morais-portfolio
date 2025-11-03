@@ -1,13 +1,5 @@
 import { SvgIcon, SvgIconProps } from '@mui/material';
 
-export function BlackHeart(props: SvgIconProps) {
-    return (
-        <SvgIcon viewBox="0 0 8 8" {...props}>
-            <path d="M7.80785 2.65398C7.80785 1.46436 6.84349 0.5 5.65409 0.5C4.93202 0.5 4.29486 0.85645 3.90393 1.40128C3.51299 0.85645 2.87583 0.5 2.15398 0.5C0.964358 0.5 0 1.46414 0 2.65398C0 2.82249 0.0213914 2.98577 0.0580623 3.14314C0.357105 5.00136 2.42312 6.96172 3.90393 7.5C5.38451 6.96172 7.45075 5.00136 7.74935 3.14336C7.78646 2.98598 7.80785 2.82271 7.80785 2.65398V2.65398Z" />
-        </SvgIcon>
-    );
-}
-
 export function Books(props: SvgIconProps) {
     return (
         <SvgIcon viewBox="0 0 18 17" {...props}>

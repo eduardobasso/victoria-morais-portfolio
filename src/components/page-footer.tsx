@@ -1,26 +1,13 @@
 import { Avatar, Grid, Link, Toolbar, Typography } from '@mui/material';
-import { BlackHeart } from './custom-emojis';
 
 function PageFooter() {
     return (
         <Toolbar component="footer">
             <Grid container spacing={0.75} alignItems="center" justifyContent="center">
                 <Grid item xs="auto">
-                    <Grid container spacing={0.5} alignItems="center">
-                        <Grid item xs="auto">
-                            <Typography component="span" variant="caption" fontWeight={400}>
-                                {`Developed with`}
-                            </Typography>
-                        </Grid>
-                        <Grid item xs="auto">
-                            <BlackHeart sx={{ fontSize: 8 }} />
-                        </Grid>
-                        <Grid item xs="auto">
-                            <Typography component="span" variant="caption" fontWeight={400}>
-                                {`by`}
-                            </Typography>
-                        </Grid>
-                    </Grid>
+                    <Typography component="span" variant="caption" fontWeight={400}>
+                        {`Developed by`}
+                    </Typography>
                 </Grid>
                 <Grid item xs="auto">
                     <Avatar

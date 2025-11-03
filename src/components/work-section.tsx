@@ -37,6 +37,7 @@ function WorkSection() {
                         imgAlt={`Gama leveling cover`}
                         imgPos="left"
                         route="/work/gama-leveling"
+                        confidential
                     />
                     <ProjectCard
                         company={`UX/UI trial work`}
@@ -47,6 +48,7 @@ function WorkSection() {
                         imgAlt={`Vupt cover`}
                         imgPos="right"
                         route="/documents/vupt-ux-trial-work.pdf"
+                        confidential
                     />
                 </Stack>
             </Container>
