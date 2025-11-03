@@ -5,13 +5,13 @@ import ProfileSection from '../components/profile-section';
 import WorkSection from '../components/work-section';
 
 const Index: NextPage = () => {
-    return (
-        <PageWrapper isHomePage>
-            <ProfileSection />
-            <InnerHeading text="My work" />
-            <WorkSection />
-        </PageWrapper>
-    );
+  return (
+    <PageWrapper isHomePage>
+      <ProfileSection />
+      <InnerHeading text="My work" />
+      <WorkSection />
+    </PageWrapper>
+  );
 };
 
 export default Index;
