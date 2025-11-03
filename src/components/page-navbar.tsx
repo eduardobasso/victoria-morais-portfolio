@@ -13,7 +13,6 @@ import {
   Zoom,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-import { useRouter } from 'next/router';
 import globalStyles from '../styles/global.module.css';
 import { GitHub, LinkedInCircle, MediumCircle } from './custom-icons';
 
@@ -22,7 +21,6 @@ type TPageNavbarProps = {
 };
 
 function PageNavbar({ hasH1 }: TPageNavbarProps) {
-  const router = useRouter();
   const scrolled = useScrollTrigger();
 
   return (
@@ -72,9 +70,7 @@ function PageNavbar({ hasH1 }: TPageNavbarProps) {
                   bgcolor: alpha(theme.palette.common.white, 0.3),
                 },
               })}
-              onClick={() => {
-                router.push('/work');
-              }}
+              href="/work"
             >
               {`Work`}
             </Button>
@@ -87,9 +83,7 @@ function PageNavbar({ hasH1 }: TPageNavbarProps) {
                   bgcolor: alpha(theme.palette.common.white, 0.3),
                 },
               })}
-              onClick={() => {
-                router.push('/contact');
-              }}
+              href="/contact"
             >
               {`Contact`}
             </Button>

@@ -1,71 +1,84 @@
-import { Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Link, Stack, Typography } from '@mui/material';
 import type { Theme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { type MouseEventHandler, useState } from 'react';
 import PasswordModal from './password-modal';
 import WorkInProgressModal from './work-in-progress-modal';
 
 type TProjectCardProps = {
-  company: string;
   title: string;
+  company: string;
   description: string;
   role: string;
+  route: string;
   imgSrc: string;
   imgAlt: string;
   imgPos?: 'right' | 'left';
-  route?: string;
   confidential?: boolean;
+  workInProgress?: boolean;
   hiddenAt?: boolean;
 };
 
 function ProjectCard({
-  company,
   title,
+  company,
   description,
   role,
+  route,
   imgSrc,
   imgAlt,
   imgPos = 'right',
-  route,
   confidential,
+  workInProgress = false,
   hiddenAt = false,
 }: TProjectCardProps) {
   const router = useRouter();
 
-  const enterRoute = () => {
-    if (route) router.push(route);
+  const [wipModalIsOpen, setWipModalIsOpen] = useState<boolean>(false);
+  const [passwordModalIsOpen, setPasswordModalIsOpen] = useState<boolean>(false);
+
+  const openWipModal = (): void => {
+    setWipModalIsOpen(true);
   };
 
-  const [validating, setValidating] = useState<boolean>(false);
-  const [progressing, setProgressing] = useState<boolean>(false);
-
-  const openPasswordModal = () => {
-    setValidating(true);
+  const closeWipModal = (): void => {
+    setWipModalIsOpen(false);
   };
 
-  const closePasswordModal = () => {
-    setValidating(false);
+  const openPasswordModal = (): void => {
+    setPasswordModalIsOpen(true);
   };
 
-  const validateBeforeEnter = () => {
-    const password = sessionStorage.getItem('VicMSA-pwd');
+  const closePasswordModal = (): void => {
+    setPasswordModalIsOpen(false);
+  };
 
-    if (confidential && password === null) {
-      openPasswordModal();
-    } else {
-      enterRoute();
+  const enterRoute = (): void => {
+    if (route) {
+      router.push(route);
     }
   };
 
-  const openWipModal = () => {
-    setProgressing(true);
-  };
+  const verifyBeforeEnter: MouseEventHandler<HTMLDivElement | HTMLAnchorElement> = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
 
-  const closeWipModal = () => {
-    setProgressing(false);
-  };
+    if (workInProgress) {
+      openWipModal();
 
-  const workInProgress = route === undefined;
+      return;
+    }
+
+    if (confidential) {
+      const password = sessionStorage.getItem('VicMSA-pwd');
+
+      if (password === null) {
+        openPasswordModal();
+      } else {
+        enterRoute();
+      }
+    }
+  };
 
   return (
     <>
@@ -74,6 +87,7 @@ function ProjectCard({
         sx={(theme: Theme) => ({
           borderRadius: 0,
           bgcolor: 'background.default',
+          transition: theme.transitions.create(['box-shadow', 'background-color']),
           [theme.breakpoints.up('md')]: {
             p: 0,
           },
@@ -83,18 +97,7 @@ function ProjectCard({
           [theme.breakpoints.only('xs')]: {
             mx: -2,
           },
-        })}
-      >
-        <CardActionArea
-          component="div"
-          sx={(theme: Theme) => ({
-            [theme.breakpoints.up('md')]: {
-              display: 'flex',
-              flexDirection: imgPos === 'right' ? 'row' : 'row-reverse',
-              alignItems: 'center',
-            },
-            textAlign: 'left',
-            transition: theme.transitions.create('background-color'),
+          '& > div': {
             '& > img': {
               opacity: 1,
               transition: theme.transitions.create('opacity'),
@@ -102,7 +105,11 @@ function ProjectCard({
             '& > div': {
               transition: theme.transitions.create('padding'),
             },
-            '&:hover, &:focus': {
+          },
+          '&:hover, &:focus, &:focus-within': {
+            bgColor: theme.palette.grey[50],
+            cursor: 'pointer',
+            '& > div': {
               '& > img': {
                 opacity: 0.5,
               },
@@ -113,8 +120,24 @@ function ProjectCard({
                 },
               },
             },
+          },
+          '&:focus, &:focus-within': {
+            outline: 'none',
+            boxShadow: `0 0 0 2px white, 0 0 0 4px ${theme.palette.primary.main}`,
+          },
+        })}
+      >
+        <Box
+          component="div"
+          sx={(theme: Theme) => ({
+            [theme.breakpoints.up('md')]: {
+              display: 'flex',
+              flexDirection: imgPos === 'right' ? 'row' : 'row-reverse',
+              alignItems: 'center',
+            },
+            textAlign: 'left',
           })}
-          onClick={workInProgress ? openWipModal : validateBeforeEnter}
+          onClick={verifyBeforeEnter}
         >
           <CardContent
             sx={(theme: Theme) => ({
@@ -125,21 +148,23 @@ function ProjectCard({
               },
             })}
           >
-            <Stack component="h3" spacing={0}>
-              <Typography component="span" variant="h4" fontWeight={500}>
-                {title}
-              </Typography>
-              <div>
-                {!hiddenAt && (
-                  <Typography component="span" variant="overline" color="text.secondary">
-                    {`at `}
-                  </Typography>
-                )}
-                <Typography component="span" variant="overline" color="text.secondary">
-                  {company}
+            <Link href={route} underline="none" onClick={verifyBeforeEnter} sx={{ '&:focus': { outline: 'none' } }}>
+              <Stack component="h3" spacing={0}>
+                <Typography component="span" variant="h4" fontWeight={500}>
+                  {title}
                 </Typography>
-              </div>
-            </Stack>
+                <div>
+                  {!hiddenAt && (
+                    <Typography component="span" variant="overline" color="text.secondary">
+                      {`at `}
+                    </Typography>
+                  )}
+                  <Typography component="span" variant="overline" color="text.secondary">
+                    {company}
+                  </Typography>
+                </div>
+              </Stack>
+            </Link>
             <Typography variant="body1" fontWeight={300} mb={1.5}>
               {description}
             </Typography>
@@ -172,12 +197,12 @@ function ProjectCard({
             image={imgSrc}
             alt={imgAlt}
           />
-        </CardActionArea>
+        </Box>
       </Card>
-      {confidential && validating && (
-        <PasswordModal open={validating} onClose={closePasswordModal} onConfirm={enterRoute} />
+      {confidential && passwordModalIsOpen && (
+        <PasswordModal open={passwordModalIsOpen} onClose={closePasswordModal} onConfirm={enterRoute} />
       )}
-      {workInProgress && progressing && <WorkInProgressModal open={progressing} onClose={closeWipModal} />}
+      {workInProgress && wipModalIsOpen && <WorkInProgressModal open={wipModalIsOpen} onClose={closeWipModal} />}
     </>
   );
 }

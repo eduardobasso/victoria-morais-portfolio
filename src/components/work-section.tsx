@@ -16,7 +16,9 @@ function WorkSection() {
             imgSrc="/images/projects/accessibility-audits/thumb.png"
             imgAlt={`ARTE cover`}
             imgPos="left"
+            route="/work/accessibility-audits"
             confidential
+            workInProgress
           />
           <ProjectCard
             company={`Whirlpool`}
