@@ -11,6 +11,7 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import globalStyles from '../styles/global.module.css';
 import { Close, EmailOutlined, LinkedIn } from './custom-icons';
 
 type TWorkInProgressModalProps = {
@@ -28,7 +29,7 @@ function WorkInProgressModal({ open, onClose }: TWorkInProgressModalProps) {
   return (
     <Dialog open={open} onClose={close} fullScreen={fullScreen}>
       <Box position="absolute" top={12} right={12}>
-        <IconButton color="primary" id={`btnModalClose`} onClick={close}>
+        <IconButton color="primary" id={`btnModalClose`} onClick={close} aria-label="Close">
           <Close />
         </IconButton>
       </Box>
@@ -48,6 +49,7 @@ function WorkInProgressModal({ open, onClose }: TWorkInProgressModalProps) {
           <ListItem>
             <ListItemIcon sx={{ color: 'inherit' }}>
               <EmailOutlined />
+              <span className={globalStyles.hidden}>E-mail</span>
             </ListItemIcon>
             <ListItemText
               primaryTypographyProps={{
@@ -61,6 +63,7 @@ function WorkInProgressModal({ open, onClose }: TWorkInProgressModalProps) {
           <ListItem>
             <ListItemIcon sx={{ color: 'inherit' }}>
               <LinkedIn />
+              <span className={globalStyles.hidden}>LinkedIn</span>
             </ListItemIcon>
             <ListItemText
               primaryTypographyProps={{

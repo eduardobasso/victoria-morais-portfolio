@@ -25,14 +25,14 @@ const BrastempExperience: NextPage = () => {
 
   useEffect(() => {
     if (sessionStorage.getItem('VicMSA-pwd') === null) {
-      router.push('/work');
+      router.push('/not-authorized');
     }
   });
 
   const brastempTheme = responsiveFontSizes(createTheme(theme));
 
   return (
-    <PageWrapper title={`Brastemp Experience`}>
+    <PageWrapper title="Brastemp Experience">
       <ThemeProvider theme={brastempTheme}>
         <ProjectCover
           title={`Technical assistance location`}

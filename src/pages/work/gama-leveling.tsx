@@ -1,19 +1,29 @@
 import { Box, Container, Grid, Link, Paper, Stack, Typography } from '@mui/material';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import ContentNavbar from '../../components/content-navbar';
 import PageWrapper from '../../components/page-wrapper';
 import ProjectCover from '../../components/project-cover';
 import theme from '../../theme/gama-academy';
 
 const SkillAssessment: NextPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (sessionStorage.getItem('VicMSA-pwd') === null) {
+      router.push('/not-authorized');
+    }
+  });
+
   const gamaAcademyTheme = responsiveFontSizes(createTheme(theme));
 
   return (
-    <PageWrapper title={`Gama leveling`}>
+    <PageWrapper title="Skill Assessment">
       <ThemeProvider theme={gamaAcademyTheme}>
         <ProjectCover
-          title={`Gama leveling`}
+          title={`Skill Assessment`}
           description={`An auto evaluation service to understand the student's profile and offer the best solution: a preparatory study content, an experience program or a learning path`}
           image="/images/projects/gama-leveling/cover.jpg"
           presentationUrl="/documents/gama-leveling.pdf"

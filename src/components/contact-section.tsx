@@ -31,6 +31,7 @@ function ContactSection() {
               <ListItem>
                 <ListItemIcon sx={{ color: 'inherit' }}>
                   <EmailOutlined />
+                  <span className={globalStyles.hidden}>E-mail</span>
                 </ListItemIcon>
                 <ListItemText
                   primaryTypographyProps={{
@@ -44,6 +45,7 @@ function ContactSection() {
               <ListItem>
                 <ListItemIcon sx={{ color: 'inherit' }}>
                   <LinkedIn />
+                  <span className={globalStyles.hidden}>LinkedIn</span>
                 </ListItemIcon>
                 <ListItemText
                   primaryTypographyProps={{

@@ -7,7 +7,9 @@ import WorkInProgressModal from './work-in-progress-modal';
 
 type TProjectCardProps = {
   title: string;
-  company: string;
+  companyName: string;
+  companyAbbr?: string;
+  companyNameLang?: 'en' | 'pt';
   description: string;
   role: string;
   route: string;
@@ -21,7 +23,9 @@ type TProjectCardProps = {
 
 function ProjectCard({
   title,
-  company,
+  companyName,
+  companyAbbr,
+  companyNameLang = 'en',
   description,
   role,
   route,
@@ -128,7 +132,6 @@ function ProjectCard({
         })}
       >
         <Box
-          component="div"
           sx={(theme: Theme) => ({
             [theme.breakpoints.up('md')]: {
               display: 'flex',
@@ -160,7 +163,13 @@ function ProjectCard({
                     </Typography>
                   )}
                   <Typography component="span" variant="overline" color="text.secondary">
-                    {company}
+                    {companyAbbr ? (
+                      <abbr title={companyName} lang={companyNameLang}>
+                        {companyAbbr}
+                      </abbr>
+                    ) : (
+                      companyName
+                    )}
                   </Typography>
                 </div>
               </Stack>

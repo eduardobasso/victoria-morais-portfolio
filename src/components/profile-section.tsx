@@ -33,31 +33,35 @@ function ProfileSection() {
                   {`I'm a designer based in Portugal who started working with technology as a Developer and through this 8 years of experience I've learned about User Experience, Usability and Accessibility.`}
                 </Typography>
                 <Typography variant="body1" fontWeight={300} mb={3}>
-                  {`I'm currently working at Tangível allocated at ARTE as an Auditor, ensuring websites and applications standards for the Portuguese Usability and Accessibility Seal.`}
+                  {`I'm currently working at Tangível allocated at `}
+                  <abbr title="Agência para Reforma Tecnológica do Estado" lang="pt">
+                    ARTE
+                  </abbr>
+                  {` as an Auditor, ensuring websites and applications standards for the Portuguese Usability and Accessibility Seal.`}
                 </Typography>
                 <h3 className={globalStyles.hidden}>{`My skills`}</h3>
-                <Grid container rowSpacing={1} columnSpacing={4}>
-                  <Grid item xs={12} sm="auto" sx={{ paddingLeft: '0 !important' }}>
+                <Grid container rowSpacing={1} columnSpacing={4} component="ul" sx={{ m: 0, p: 0, listStyle: 'none' }}>
+                  <Grid item xs={12} sm="auto" sx={{ paddingLeft: '0 !important' }} component="li">
                     <Box display="flex" alignItems="center" gap={1.5}>
                       <Hearts sx={{ fontSize: 18 }} />
                       <Typography variant="body2" fontWeight={500}>
-                        {`Product Discovery`}
+                        {`Usability`}
                       </Typography>
                     </Box>
                   </Grid>
-                  <Grid item xs={12} sm="auto">
+                  <Grid item xs={12} sm="auto" component="li">
                     <Box display="flex" alignItems="center" gap={1.5}>
                       <Books sx={{ fontSize: 18 }} />
                       <Typography variant="body2" fontWeight={500}>
-                        {`UX Research`}
+                        {`Development`}
                       </Typography>
                     </Box>
                   </Grid>
-                  <Grid item xs={12} sm="auto">
+                  <Grid item xs={12} sm="auto" component="li">
                     <Box display="flex" alignItems="center" gap={1.25}>
                       <Muscle sx={{ fontSize: 18 }} />
                       <Typography variant="body2" fontWeight={500}>
-                        {`UX/UI Design`}
+                        {`Accessibility`}
                       </Typography>
                     </Box>
                   </Grid>
@@ -69,7 +73,7 @@ function ProfileSection() {
             <Avatar
               variant="square"
               src="/images/profile-picture.png"
-              alt="Victoria's profile picture"
+              alt=""
               sx={{
                 width: '100%',
                 maxWidth: 410,

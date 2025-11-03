@@ -11,7 +11,7 @@ function Document() {
         />
         <meta
           name="keywords"
-          content={`Portfolio, UX Design, UI Design, Product Design, UX Research, Usability, Accessibility`}
+          content={`Portfolio, UX Design, UI Design, Product Design, UX Research, Usability, Development, Accessibility`}
         />
         <meta name="author" content={`Victoria Morais Santos`} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
