@@ -28,6 +28,7 @@ function ContentNavbar({ name = 'Content navigation', items }: TContentNavbarPro
           justifyContent: 'center',
           pt: 8,
           pb: 9,
+          listStyle: 'none',
         }}
       >
         {items.map((item) => (

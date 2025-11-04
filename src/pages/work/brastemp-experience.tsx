@@ -80,12 +80,15 @@ const BrastempExperience: NextPage = () => {
                   <h3 className={globalStyles.hidden}>Project information</h3>
                   <Paper
                     elevation={0}
-                    sx={{
+                    sx={(theme) => ({
+                      border: `1px solid ${theme.palette.primary.main}`,
+                      borderBottomWidth: 3,
                       borderRadius: 0,
+                      background: 'none',
                       py: 6,
                       px: 4,
                       textAlign: 'center',
-                    }}
+                    })}
                   >
                     <Stack component="ul" spacing={1} sx={{ listStyle: 'none', p: 0, m: 0 }}>
                       <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
@@ -135,13 +138,16 @@ const BrastempExperience: NextPage = () => {
                     </Typography>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         pt: 3,
                         pb: 1,
                         px: 1,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Box component="figure">
                         <Box
@@ -173,8 +179,10 @@ const BrastempExperience: NextPage = () => {
                       variant="outlined"
                       sx={(theme) => ({
                         height: '100%',
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
-                        bgcolor: theme.palette.background.default,
+                        background: 'none',
                         p: 6,
                         color: 'text.secondary',
                       })}
@@ -203,8 +211,10 @@ const BrastempExperience: NextPage = () => {
                       variant="outlined"
                       sx={(theme) => ({
                         height: '100%',
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
-                        bgcolor: theme.palette.background.default,
+                        background: 'none',
                         p: 6,
                         color: 'text.secondary',
                       })}
@@ -247,12 +257,15 @@ const BrastempExperience: NextPage = () => {
                     <h4 className={globalStyles.hidden}>Metrics</h4>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         py: 6,
                         px: 4,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Stack component="ul" spacing={1} sx={{ listStyle: 'none', p: 0, m: 0 }}>
                         <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
@@ -287,13 +300,16 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={6}>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         pt: 3,
                         pb: 1,
                         px: 1,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Box component="figure">
                         <Box
@@ -321,12 +337,15 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={7}>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         py: 4,
                         px: 2,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Stack spacing={2}>
                         <Typography component="h4" variant="body1" color="text.secondary" fontWeight={500}>
@@ -418,12 +437,15 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={5}>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         py: 4,
                         px: 2,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Stack spacing={2}>
                         <Typography component="h4" variant="body1" color="text.secondary" fontWeight={500}>
@@ -545,13 +567,16 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={6}>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         pt: 3,
                         pb: 1,
                         px: 1,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Box component="figure">
                         <Box
@@ -594,11 +619,14 @@ const BrastempExperience: NextPage = () => {
                   <h4 className={globalStyles.hidden}>Heuristic pillars</h4>
                   <Paper
                     elevation={0}
-                    sx={{
+                    sx={(theme) => ({
+                      border: `1px solid ${theme.palette.primary.main}`,
+                      borderBottomWidth: 3,
                       borderRadius: 0,
+                      background: 'none',
                       py: 2,
                       px: 3,
-                    }}
+                    })}
                   >
                     <Typography component="div" variant="body1">
                       <Typography component="h5" color="text.primary" fontWeight={500}>
@@ -645,13 +673,16 @@ const BrastempExperience: NextPage = () => {
                       </Typography>
                       <Paper
                         elevation={0}
-                        sx={{
+                        sx={(theme) => ({
+                          border: `1px solid ${theme.palette.primary.main}`,
+                          borderBottomWidth: 3,
                           borderRadius: 0,
+                          background: 'none',
                           pt: 3,
                           pb: 1,
                           px: 1,
                           textAlign: 'center',
-                        }}
+                        })}
                       >
                         <Box component="figure">
                           <Box
@@ -676,17 +707,20 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
                       <Typography component="h5" variant="h6" color="text.primary" fontWeight={500}>
-                        {`Analysis comparision`}
+                        {`Analysis comparison`}
                       </Typography>
                       <Paper
                         elevation={0}
-                        sx={{
+                        sx={(theme) => ({
+                          border: `1px solid ${theme.palette.primary.main}`,
+                          borderBottomWidth: 3,
                           borderRadius: 0,
+                          background: 'none',
                           pt: 3,
                           pb: 1,
                           px: 1,
                           textAlign: 'center',
-                        }}
+                        })}
                       >
                         <Box component="figure">
                           <Box
@@ -732,13 +766,16 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={6}>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         pt: 3,
                         pb: 1,
                         px: 1,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Box component="figure">
                         <Box
@@ -789,13 +826,16 @@ const BrastempExperience: NextPage = () => {
                   <Grid item xs={12} md={6}>
                     <Paper
                       elevation={0}
-                      sx={{
+                      sx={(theme) => ({
+                        border: `1px solid ${theme.palette.primary.main}`,
+                        borderBottomWidth: 3,
                         borderRadius: 0,
+                        background: 'none',
                         pt: 3,
                         pb: 1,
                         px: 1,
                         textAlign: 'center',
-                      }}
+                      })}
                     >
                       <Box component="figure">
                         <Box
@@ -921,17 +961,20 @@ const BrastempExperience: NextPage = () => {
                   <h3 className={globalStyles.hidden}>Highlights</h3>
                   <Paper
                     elevation={0}
-                    sx={{
+                    sx={(theme) => ({
+                      border: `1px solid ${theme.palette.primary.main}`,
+                      borderBottomWidth: 3,
                       borderRadius: 0,
+                      background: 'none',
                       pt: 4,
                       px: 3,
                       pb: 6,
                       textAlign: 'center',
-                    }}
+                    })}
                   >
                     <Stack component="ul" spacing={2} sx={{ listStyle: 'none', p: 0, m: 0 }}>
                       <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1}>
-                        <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                        <Typography component="strong" variant="h1" color="primary" fontWeight={700}>
                           {`+25%`}
                         </Typography>
                         <Typography component="span" variant="body1" color="primary" fontWeight={500}>
