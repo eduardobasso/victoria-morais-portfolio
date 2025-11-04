@@ -6,17 +6,11 @@ import PageWrapper from '../components/page-wrapper';
 const AccessibilityStatement: NextPage = () => {
   return (
     <PageWrapper title="Accessibility Statement">
-      <Box
-        component="section"
-        sx={{
-          pt: 6,
-          pb: 8,
-        }}
-      >
-        <Container sx={{ maxWidth: '676px' }}>
+      <Box component="section" sx={{ pt: 6, pb: 8 }}>
+        <Container>
           <Stack component="header" rowGap="12px" mb="52px">
             <Typography component="h1" variant="h1">{`Accessibility Statement`}</Typography>
-            <Typography component="p" variant="subtitle2">{`Last update: November 3rd, 2025`}</Typography>
+            <Typography component="p" variant="subtitle2">{`Last update: Nov 4, 2025`}</Typography>
           </Stack>
           <Stack rowGap="44px">
             <Stack rowGap="24px">
@@ -39,20 +33,20 @@ const AccessibilityStatement: NextPage = () => {
                 <Typography
                   component="li"
                   variant="body1"
-                >{`Focus: When a modal is closed, the focus appears in the card instead of the actionable element.`}</Typography>
-                <Typography component="li" variant="body1">{`Link to skip content`}</Typography>
+                >{`Focus: When a modal is closed, the focus appears in the card instead of the actionable element;`}</Typography>
+                <Typography component="li" variant="body1">{`Link to skip content;`}</Typography>
                 <Typography component="li" variant="body1">
                   <Typography
                     component="span"
                     variant="inherit"
                   >{`Inacessible content format to present my work (pdf). `}</Typography>
                   <Typography component="strong" variant="inherit" fontWeight={700}>{`Will be fixed asap`}</Typography>
-                  <br />
                   <Typography
                     component="span"
                     variant="inherit"
-                  >{` (if you would like to see my work please reach me)`}</Typography>
+                  >{` (if you would like to see my work please reach me);`}</Typography>
                 </Typography>
+                <Typography component="li" variant="body1">{`Inaccessible complex images.`}</Typography>
               </Box>
             </Stack>
           </Stack>
