@@ -21,7 +21,7 @@ function ContentNavbar({ name = 'Content navigation', items }: TContentNavbarPro
   return (
     <Box component="nav" aria-label={name}>
       <Box
-        component="ul"
+        component="ol"
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -33,6 +33,7 @@ function ContentNavbar({ name = 'Content navigation', items }: TContentNavbarPro
         {items.map((item) => (
           <Box
             key={item.anchorId}
+            component="li"
             sx={{
               mr: 2,
               ml: 2,

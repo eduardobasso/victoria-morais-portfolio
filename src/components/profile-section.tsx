@@ -35,7 +35,7 @@ function ProfileSection() {
                 <Typography variant="body1" fontWeight={300} mb={3}>
                   {`I'm currently working at Tangível allocated at `}
                   <abbr title="Agência para Reforma Tecnológica do Estado" lang="pt">
-                    ARTE
+                    {`ARTE`}
                   </abbr>
                   {` as an Auditor, ensuring websites and applications standards for the Portuguese Usability and Accessibility Seal.`}
                 </Typography>

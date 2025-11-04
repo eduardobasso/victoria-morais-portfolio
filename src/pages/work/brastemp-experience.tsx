@@ -77,6 +77,7 @@ const BrastempExperience: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
+                  <h3 className={globalStyles.hidden}>Project information</h3>
                   <Paper
                     elevation={0}
                     sx={{
@@ -86,15 +87,14 @@ const BrastempExperience: NextPage = () => {
                       textAlign: 'center',
                     }}
                   >
-                    <Stack spacing={1}>
-                      <h3 className={globalStyles.hidden}>Project information</h3>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                    <Stack component="ul" spacing={1} sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                      <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
                         {`Estimated time: 4 months`}
                       </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                      <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
                         {`My role: Product Designer`}
                       </Typography>
-                      <Typography component="p" variant="body1">
+                      <Typography component="li" variant="body1">
                         <Typography component="span" color="text.secondary" fontWeight={300}>
                           {`KPI goal: `}
                         </Typography>
@@ -119,7 +119,7 @@ const BrastempExperience: NextPage = () => {
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                       {`Before beginning the mission, I needed to understand and collect all the information about the service. The `}
-                      <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                      <abbr title="Certainties, Suppositions and Doubts">{`CSD`}</abbr>
                       {` matrix was the perfect tool to discover our certainties, suppositions and doubts about this service and direct the research and improvements.`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -130,7 +130,7 @@ const BrastempExperience: NextPage = () => {
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <Typography component="h3" variant="h6" color="text.primary" fontWeight={500}>
-                      <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                      <abbr title="Certainties, Suppositions and Doubts">{`CSD`}</abbr>
                       {` matrix`}
                     </Typography>
                     <Paper
@@ -157,7 +157,7 @@ const BrastempExperience: NextPage = () => {
                           }}
                         />
                         <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                          <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                          <abbr title="Certainties, Suppositions and Doubts">{`CSD`}</abbr>
                           {` matrix participants: Product Designers, CRO, PO, SEO, Developers, QA, Tech Lead and Stakeholders.`}
                         </Typography>
                       </Box>
@@ -183,15 +183,17 @@ const BrastempExperience: NextPage = () => {
                         <Typography component="h4" variant="body1" fontWeight={500}>
                           {`Suppositions`}
                         </Typography>
-                        <Typography component="p" variant="body1" fontWeight={300}>
-                          {`"Users don't know which services a technical visit attends"`}
-                        </Typography>
-                        <Typography component="p" variant="body1" fontWeight={300}>
-                          {`"Users may schedule a visit to solve the problem using an online service"`}
-                        </Typography>
-                        <Typography component="p" variant="body1" fontWeight={300}>
-                          {`"Users are searching for more information about the tecnhical assistant on this page"`}
-                        </Typography>
+                        <Stack component="ul" spacing={2} sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                          <Typography component="li" variant="body1" fontWeight={300}>
+                            {`"Users don't know which services a technical visit attends"`}
+                          </Typography>
+                          <Typography component="li" variant="body1" fontWeight={300}>
+                            {`"Users may schedule a visit to solve the problem using an online service"`}
+                          </Typography>
+                          <Typography component="li" variant="body1" fontWeight={300}>
+                            {`"Users are searching for more information about the tecnhical assistant on this page"`}
+                          </Typography>
+                        </Stack>
                       </Stack>
                     </Paper>
                   </Grid>
@@ -236,7 +238,7 @@ const BrastempExperience: NextPage = () => {
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                         {`At that moment, I searched for the information based on the `}
-                        <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                        <abbr title="Certainties, Suppositions and Doubts">{`CSD`}</abbr>
                         {` matrix to validate all the certainties presented. The challenge was to sort through the data and make meaningful information about the suppositions and doubts to do the survey.`}
                       </Typography>
                     </Stack>
@@ -252,14 +254,14 @@ const BrastempExperience: NextPage = () => {
                         textAlign: 'center',
                       }}
                     >
-                      <Stack spacing={1}>
-                        <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                      <Stack component="ul" spacing={1} sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                        <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
                           {`+60% of organic access`}
                         </Typography>
-                        <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                        <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
                           {`3rd page with more visits per month`}
                         </Typography>
-                        <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                        <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
                           {`16% of all online services representation`}
                         </Typography>
                       </Stack>
@@ -927,8 +929,8 @@ const BrastempExperience: NextPage = () => {
                       textAlign: 'center',
                     }}
                   >
-                    <Stack spacing={2}>
-                      <Box component="p" display="flex" alignItems="center" justifyContent="center" gap={1}>
+                    <Stack component="ul" spacing={2} sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                      <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1}>
                         <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
                           {`+25%`}
                         </Typography>
@@ -936,10 +938,10 @@ const BrastempExperience: NextPage = () => {
                           {`of users scheduling their visit online!`}
                         </Typography>
                       </Box>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                      <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
                         {`Strategic goal achieved! 🎉 🎉`}
                       </Typography>
-                      <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
+                      <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
                         {`-11% on telephone calls!`}
                       </Typography>
                     </Stack>
