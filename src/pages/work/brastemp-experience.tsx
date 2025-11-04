@@ -1,16 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Paper,
-  Stack,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-  Typography,
-} from '@mui/material';
+import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
@@ -351,86 +339,32 @@ const BrastempExperience: NextPage = () => {
                         <Typography component="h4" variant="body1" color="text.secondary" fontWeight={500}>
                           {`What's the channel preference for looking for information?`}
                         </Typography>
-                        <Box display="flex" alignItems="center" justifyContent="center">
-                          <TableContainer sx={{ width: 'auto' }}>
-                            <Table sx={{ width: 'auto' }}>
-                              <TableBody>
-                                <TableRow>
-                                  <TableCell
-                                    sx={{
-                                      maxWidth: 108,
-                                      py: 1,
-                                      px: 0.75,
-                                      textAlign: 'center',
-                                    }}
-                                  >
-                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
-                                      {`58%`}
-                                    </Typography>
-                                  </TableCell>
-                                  <TableCell sx={{ py: 1, px: 0.75 }}>
-                                    <Typography
-                                      component="span"
-                                      variant="body1"
-                                      color="text.secondary"
-                                      fontWeight={300}
-                                    >
-                                      {`prefer chat or WhatsApp`}
-                                    </Typography>
-                                  </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                  <TableCell
-                                    sx={{
-                                      maxWidth: 118,
-                                      py: 1,
-                                      px: 0.75,
-                                      textAlign: 'center',
-                                    }}
-                                  >
-                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
-                                      {`45-54`}
-                                    </Typography>
-                                  </TableCell>
-                                  <TableCell sx={{ py: 1, px: 0.75 }}>
-                                    <Typography
-                                      component="span"
-                                      variant="body1"
-                                      color="text.secondary"
-                                      fontWeight={300}
-                                    >
-                                      {`year olds use WhatsApp`}
-                                    </Typography>
-                                  </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                  <TableCell
-                                    sx={{
-                                      maxWidth: 108,
-                                      py: 1,
-                                      px: 0.75,
-                                      textAlign: 'center',
-                                    }}
-                                  >
-                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
-                                      {`55+`}
-                                    </Typography>
-                                  </TableCell>
-                                  <TableCell sx={{ py: 1, px: 0.75 }}>
-                                    <Typography
-                                      component="span"
-                                      variant="body1"
-                                      color="text.secondary"
-                                      fontWeight={300}
-                                    >
-                                      {`only use the telephone`}
-                                    </Typography>
-                                  </TableCell>
-                                </TableRow>
-                              </TableBody>
-                            </Table>
-                          </TableContainer>
-                        </Box>
+                        <Stack component="ul" spacing={2} sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                          <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1.5}>
+                            <Typography component="strong" variant="h4" color="primary" fontWeight={600} minWidth={106}>
+                              {`58%`}
+                            </Typography>
+                            <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
+                              {`prefer chat or WhatsApp`}
+                            </Typography>
+                          </Box>
+                          <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1.5}>
+                            <Typography component="strong" variant="h4" color="primary" fontWeight={600} minWidth={106}>
+                              {`45-54`}
+                            </Typography>
+                            <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
+                              {`year olds use WhatsApp`}
+                            </Typography>
+                          </Box>
+                          <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1.5}>
+                            <Typography component="strong" variant="h4" color="primary" fontWeight={600} minWidth={106}>
+                              {`55+`}
+                            </Typography>
+                            <Typography component="li" variant="body1" color="text.secondary" fontWeight={300}>
+                              {`only use the telephone`}
+                            </Typography>
+                          </Box>
+                        </Stack>
                       </Stack>
                     </Paper>
                   </Grid>
@@ -451,86 +385,53 @@ const BrastempExperience: NextPage = () => {
                         <Typography component="h4" variant="body1" color="text.secondary" fontWeight={500}>
                           {`What do they need for this service?`}
                         </Typography>
-                        <Box display="flex" alignItems="center" justifyContent="center">
-                          <TableContainer sx={{ width: 'auto' }}>
-                            <Table sx={{ width: 'auto' }}>
-                              <TableBody>
-                                <TableRow>
-                                  <TableCell
-                                    sx={{
-                                      maxWidth: 80,
-                                      py: 1,
-                                      px: 0.75,
-                                      textAlign: 'center',
-                                    }}
-                                  >
-                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
-                                      {`28%`}
-                                    </Typography>
-                                  </TableCell>
-                                  <TableCell sx={{ py: 1, px: 0.75 }}>
-                                    <Typography
-                                      component="span"
-                                      variant="body1"
-                                      color="text.secondary"
-                                      fontWeight={300}
-                                    >
-                                      {`information about the service`}
-                                    </Typography>
-                                  </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                  <TableCell
-                                    sx={{
-                                      maxWidth: 80,
-                                      py: 1,
-                                      px: 0.75,
-                                      textAlign: 'center',
-                                    }}
-                                  >
-                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
-                                      {`33%`}
-                                    </Typography>
-                                  </TableCell>
-                                  <TableCell sx={{ py: 1, px: 0.75 }}>
-                                    <Typography
-                                      component="span"
-                                      variant="body1"
-                                      color="text.secondary"
-                                      fontWeight={300}
-                                    >
-                                      {`want to schedule a visit`}
-                                    </Typography>
-                                  </TableCell>
-                                </TableRow>
-                                <TableRow>
-                                  <TableCell
-                                    sx={{
-                                      maxWidth: 80,
-                                      py: 1,
-                                      px: 0.75,
-                                      textAlign: 'center',
-                                    }}
-                                  >
-                                    <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
-                                      {`32%`}
-                                    </Typography>
-                                  </TableCell>
-                                  <TableCell sx={{ py: 1, px: 0.75 }}>
-                                    <Typography
-                                      component="span"
-                                      variant="body1"
-                                      color="text.secondary"
-                                      fontWeight={300}
-                                    >
-                                      {`speak to a technician by phone`}
-                                    </Typography>
-                                  </TableCell>
-                                </TableRow>
-                              </TableBody>
-                            </Table>
-                          </TableContainer>
-                        </Box>
+                        <Stack component="ul" spacing={2} sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                          <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1.5}>
+                            <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                              {`28%`}
+                            </Typography>
+                            <Typography
+                              component="li"
+                              variant="body1"
+                              color="text.secondary"
+                              fontWeight={300}
+                              minWidth={260}
+                              textAlign="left"
+                            >
+                              {`information about the service`}
+                            </Typography>
+                          </Box>
+                          <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1.5}>
+                            <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                              {`33%`}
+                            </Typography>
+                            <Typography
+                              component="li"
+                              variant="body1"
+                              color="text.secondary"
+                              fontWeight={300}
+                              minWidth={260}
+                              textAlign="left"
+                            >
+                              {`want to schedule a visit`}
+                            </Typography>
+                          </Box>
+                          <Box component="li" display="flex" alignItems="center" justifyContent="center" gap={1.5}>
+                            <Typography component="strong" variant="h4" color="primary" fontWeight={600}>
+                              {`32%`}
+                            </Typography>
+                            <Typography
+                              component="li"
+                              variant="body1"
+                              color="text.secondary"
+                              fontWeight={300}
+                              minWidth={260}
+                              textAlign="left"
+                            >
+                              {`speak to a technician by phone`}
+                            </Typography>
+                          </Box>
+                        </Stack>
                       </Stack>
                     </Paper>
                   </Grid>
