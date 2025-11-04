@@ -118,7 +118,9 @@ const BrastempExperience: NextPage = () => {
                       {`Discovery`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                      {`Before beginning the mission, I needed to understand and collect all the information about the service. The CSD matrix was the perfect tool to discover our certainties, suppositions and doubts about this service and direct the research and improvements.`}
+                      {`Before beginning the mission, I needed to understand and collect all the information about the service. The `}
+                      <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                      {` matrix was the perfect tool to discover our certainties, suppositions and doubts about this service and direct the research and improvements.`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                       {`After a critical analysis of the information, some questions were raised. It had been discovered during the project and in the end, we had to get the answers to it.`}
@@ -128,7 +130,8 @@ const BrastempExperience: NextPage = () => {
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
                     <Typography component="h3" variant="h6" color="text.primary" fontWeight={500}>
-                      {`CSD matrix`}
+                      <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                      {` matrix`}
                     </Typography>
                     <Paper
                       elevation={0}
@@ -154,7 +157,8 @@ const BrastempExperience: NextPage = () => {
                           }}
                         />
                         <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                          {`CSD matrix participants: Product Designers, CRO, PO, SEO, Developers, QA, Tech Lead and Stakeholders.`}
+                          <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                          {` matrix participants: Product Designers, CRO, PO, SEO, Developers, QA, Tech Lead and Stakeholders.`}
                         </Typography>
                       </Box>
                     </Paper>
@@ -231,7 +235,9 @@ const BrastempExperience: NextPage = () => {
                         {`Analytics`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
-                        {`At that moment, I searched for the information based on the CSD matrix to validate all the certainties presented. The challenge was to sort through the data and make meaningful information about the suppositions and doubts to do the survey.`}
+                        {`At that moment, I searched for the information based on the `}
+                        <abbr title="Certainties, Suppositions and Doubts">CSD</abbr>
+                        {` matrix to validate all the certainties presented. The challenge was to sort through the data and make meaningful information about the suppositions and doubts to do the survey.`}
                       </Typography>
                     </Stack>
                   </Grid>

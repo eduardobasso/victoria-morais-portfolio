@@ -109,7 +109,7 @@ function PageNavbar({ hasH1 }: TPageNavbarProps) {
                         bgcolor: alpha(theme.palette.common.white, 0.3),
                       },
                     })}
-                    aria-label="View profile on Medium"
+                    aria-label="Medium"
                     id="btnMedium"
                   >
                     <MediumCircle />
@@ -129,7 +129,7 @@ function PageNavbar({ hasH1 }: TPageNavbarProps) {
                         bgcolor: alpha(theme.palette.common.white, 0.3),
                       },
                     })}
-                    aria-label="View profile on GitHub"
+                    aria-label="GitHub"
                     id="btnGitHub"
                   >
                     <GitHub />
@@ -149,7 +149,7 @@ function PageNavbar({ hasH1 }: TPageNavbarProps) {
                         bgcolor: alpha(theme.palette.common.white, 0.3),
                       },
                     })}
-                    aria-label="View profile on LinkedIn"
+                    aria-label="LinkedIn"
                     id="btnLinkedIn"
                   >
                     <LinkedInCircle />

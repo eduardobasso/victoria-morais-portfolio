@@ -38,7 +38,6 @@ function ProjectCover({ title, description, image, presentationUrl }: TProjectCo
                     color="secondary"
                     endIcon={<OpenInNew />}
                     sx={{
-                      // borderRadius: 0,
                       py: 2,
                       px: 4,
                       textTransform: 'none',
@@ -46,7 +45,7 @@ function ProjectCover({ title, description, image, presentationUrl }: TProjectCo
                     href={presentationUrl}
                     target="_blank"
                   >
-                    {`View the visual concept`}
+                    {`Visual concept`}
                   </Button>
                 )}
               </Grid>
