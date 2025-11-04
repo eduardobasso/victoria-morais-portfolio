@@ -43,6 +43,7 @@ const BrastempExperience: NextPage = () => {
         />
         <Box bgcolor="background.default">
           <ContentNavbar
+            name="Discovery phases"
             items={[
               {
                 label: 'Overview',

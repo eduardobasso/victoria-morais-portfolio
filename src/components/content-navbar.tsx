@@ -1,52 +1,58 @@
 import { Box, Link } from '@mui/material';
 
 type TContentNavbarProps = {
-    items: Array<{
-        label: string;
-        anchorId: string;
-    }>;
+  name?: string;
+  items: Array<{
+    label: string;
+    anchorId: string;
+  }>;
 };
 
-function ContentNavbar({ items }: TContentNavbarProps) {
-    const scrollToAnchor = (anchorId: string) => {
-        const anchor = document.getElementById(anchorId);
-        if (anchor) {
-            anchor.scrollIntoView({
-                behavior: 'smooth',
-            });
-        }
-    };
+function ContentNavbar({ name = 'Content navigation', items }: TContentNavbarProps) {
+  const scrollToAnchor = (anchorId: string) => {
+    const anchor = document.getElementById(anchorId);
+    if (anchor) {
+      anchor.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
 
-    return (
-        <Box
-            component="nav"
+  return (
+    <Box component="nav" aria-label={name}>
+      <Box
+        component="ul"
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          pt: 8,
+          pb: 9,
+        }}
+      >
+        {items.map((item) => (
+          <Box
+            key={item.anchorId}
             sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                pt: 8,
-                pb: 9,
+              mr: 2,
+              ml: 2,
             }}
-        >
-            {items.map((item) => (
-                <Link
-                    component="button"
-                    key={item.anchorId}
-                    color="primary"
-                    typography="body1"
-                    sx={{
-                        mr: 2,
-                        ml: 2,
-                        fontWeight: 500,
-                    }}
-                    underline="hover"
-                    onClick={() => scrollToAnchor(item.anchorId)}
-                >
-                    {item.label}
-                </Link>
-            ))}
-        </Box>
-    );
+          >
+            <Link
+              component="button"
+              color="primary"
+              typography="body1"
+              sx={{ fontWeight: 500 }}
+              underline="hover"
+              onClick={() => scrollToAnchor(item.anchorId)}
+            >
+              {item.label}
+            </Link>
+          </Box>
+        ))}
+      </Box>
+    </Box>
+  );
 }
 
 export default ContentNavbar;
