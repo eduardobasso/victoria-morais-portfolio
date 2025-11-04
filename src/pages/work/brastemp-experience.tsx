@@ -18,6 +18,7 @@ import { useEffect } from 'react';
 import ContentNavbar from '../../components/content-navbar';
 import PageWrapper from '../../components/page-wrapper';
 import ProjectCover from '../../components/project-cover';
+import globalStyles from '../../styles/global.module.css';
 import theme from '../../theme/brastemp';
 
 const BrastempExperience: NextPage = () => {
@@ -66,7 +67,7 @@ const BrastempExperience: NextPage = () => {
               <Grid container spacing={6}>
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
-                    <Typography component="h4" variant="h4" color="primary" fontWeight={600}>
+                    <Typography component="h2" variant="h4" color="primary" fontWeight={600}>
                       {`Overview`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -85,6 +86,7 @@ const BrastempExperience: NextPage = () => {
                     }}
                   >
                     <Stack spacing={1}>
+                      <h3 className={globalStyles.hidden}>Project information</h3>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                         {`Estimated time: 4 months`}
                       </Typography>
@@ -111,7 +113,7 @@ const BrastempExperience: NextPage = () => {
               <Grid container spacing={6}>
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
-                    <Typography component="h4" variant="h4" color="primary" fontWeight={600}>
+                    <Typography component="h2" variant="h4" color="primary" fontWeight={600}>
                       {`Discovery`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -123,34 +125,39 @@ const BrastempExperience: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      borderRadius: 0,
-                      pt: 3,
-                      pb: 1,
-                      px: 1,
-                      textAlign: 'center',
-                    }}
-                  >
-                    <Box component="figure">
-                      <Box
-                        component="img"
-                        src="/images/projects/brastemp-experience/csd-matrix.png"
-                        alt="CSD matrix"
-                        sx={{
-                          width: '100%',
-                          maxWidth: 482,
-                          height: 'auto',
-                          maxHeight: 158,
-                          mb: 1,
-                        }}
-                      />
-                      <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                        {`CSD matrix participants: Product Designers, CRO, PO, SEO, Developers, QA, Tech Lead and Stakeholders.`}
-                      </Typography>
-                    </Box>
-                  </Paper>
+                  <Stack spacing={2}>
+                    <Typography component="h3" variant="h6" color="text.primary" fontWeight={500}>
+                      {`CSD matrix`}
+                    </Typography>
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        borderRadius: 0,
+                        pt: 3,
+                        pb: 1,
+                        px: 1,
+                        textAlign: 'center',
+                      }}
+                    >
+                      <Box component="figure">
+                        <Box
+                          component="img"
+                          src="/images/projects/brastemp-experience/csd-matrix.png"
+                          alt="CSD matrix"
+                          sx={{
+                            width: '100%',
+                            maxWidth: 482,
+                            height: 'auto',
+                            maxHeight: 158,
+                            mb: 1,
+                          }}
+                        />
+                        <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
+                          {`CSD matrix participants: Product Designers, CRO, PO, SEO, Developers, QA, Tech Lead and Stakeholders.`}
+                        </Typography>
+                      </Box>
+                    </Paper>
+                  </Stack>
                 </Grid>
               </Grid>
               <Box my={6}>
@@ -168,7 +175,7 @@ const BrastempExperience: NextPage = () => {
                       })}
                     >
                       <Stack spacing={2}>
-                        <Typography component="h6" variant="body1" fontWeight={500}>
+                        <Typography component="h4" variant="body1" fontWeight={500}>
                           {`Suppositions`}
                         </Typography>
                         <Typography component="p" variant="body1" fontWeight={300}>
@@ -196,7 +203,7 @@ const BrastempExperience: NextPage = () => {
                       })}
                     >
                       <Stack spacing={2}>
-                        <Typography component="h6" variant="body1" fontWeight={500}>
+                        <Typography component="h4" variant="body1" fontWeight={500}>
                           {`Questions and uncertainties`}
                         </Typography>
                         <Stack component="ol" spacing={2} pl={2.25}>
@@ -219,7 +226,7 @@ const BrastempExperience: NextPage = () => {
                 <Grid container spacing={6}>
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
-                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                      <Typography component="h3" variant="h5" color="text.primary" fontWeight={500}>
                         {`Analytics`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -228,6 +235,7 @@ const BrastempExperience: NextPage = () => {
                     </Stack>
                   </Grid>
                   <Grid item xs={12} md={6}>
+                    <h4 className={globalStyles.hidden}>Metrics</h4>
                     <Paper
                       elevation={0}
                       sx={{
@@ -256,7 +264,7 @@ const BrastempExperience: NextPage = () => {
                 <Grid container spacing={6}>
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
-                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                      <Typography component="h4" variant="h5" color="text.primary" fontWeight={500}>
                         {`Hotjar surveys and clarity heatmaps`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -312,7 +320,7 @@ const BrastempExperience: NextPage = () => {
                       }}
                     >
                       <Stack spacing={2}>
-                        <Typography component="h6" variant="body1" color="text.secondary" fontWeight={500}>
+                        <Typography component="h4" variant="body1" color="text.secondary" fontWeight={500}>
                           {`What's the channel preference for looking for information?`}
                         </Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
@@ -409,7 +417,7 @@ const BrastempExperience: NextPage = () => {
                       }}
                     >
                       <Stack spacing={2}>
-                        <Typography component="h6" variant="body1" color="text.secondary" fontWeight={500}>
+                        <Typography component="h4" variant="body1" color="text.secondary" fontWeight={500}>
                           {`What do they need for this service?`}
                         </Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
@@ -501,7 +509,7 @@ const BrastempExperience: NextPage = () => {
                 <Grid container spacing={6}>
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
-                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                      <Typography component="h3" variant="h5" color="text.primary" fontWeight={500}>
                         {`Benchmark: how is the competition?`}
                       </Typography>
                       <Stack spacing={2}>
@@ -562,10 +570,10 @@ const BrastempExperience: NextPage = () => {
               <Grid container spacing={6}>
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
-                    <Typography component="h4" variant="h4" color="primary" fontWeight={600}>
+                    <Typography component="h2" variant="h4" color="primary" fontWeight={600}>
                       {`Validation and ideation`}
                     </Typography>
-                    <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                    <Typography component="h3" variant="h5" color="text.primary" fontWeight={500}>
                       {`Heuristic analysis`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -574,6 +582,7 @@ const BrastempExperience: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
+                  <h4 className={globalStyles.hidden}>Heuristic pillars</h4>
                   <Paper
                     elevation={0}
                     sx={{
@@ -582,35 +591,35 @@ const BrastempExperience: NextPage = () => {
                       px: 3,
                     }}
                   >
-                    <Typography component="dl" variant="body1">
-                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                    <Typography component="div" variant="body1">
+                      <Typography component="h5" color="text.primary" fontWeight={500}>
                         {`Findability`}
                       </Typography>
-                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                      <Typography component="p" color="text.secondary" fontWeight={300} mb={2}>
                         {`Organization and prioritization of the information.`}
                       </Typography>
-                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                      <Typography component="h5" color="text.primary" fontWeight={500}>
                         {`Accessibility`}
                       </Typography>
-                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                      <Typography component="p" color="text.secondary" fontWeight={300} mb={2}>
                         {`This service page is not accessible at all.`}
                       </Typography>
-                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                      <Typography component="h5" color="text.primary" fontWeight={500}>
                         {`Desirability`}
                       </Typography>
-                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                      <Typography component="p" color="text.secondary" fontWeight={300} mb={2}>
                         {`Is this service useful and helpful for user needs?`}
                       </Typography>
-                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                      <Typography component="h5" color="text.primary" fontWeight={500}>
                         {`Usability`}
                       </Typography>
-                      <Typography component="dd" color="text.secondary" fontWeight={300} mb={2}>
+                      <Typography component="p" color="text.secondary" fontWeight={300} mb={2}>
                         {`Bugs and absence of returning error messages.`}
                       </Typography>
-                      <Typography component="dt" color="text.primary" fontWeight={500}>
+                      <Typography component="h5" color="text.primary" fontWeight={500}>
                         {`Storytelling`}
                       </Typography>
-                      <Typography component="dd" color="text.secondary" fontWeight={300}>
+                      <Typography component="p" color="text.secondary" fontWeight={300}>
                         {`Does it explain or share thoughts on what users can do?`}
                       </Typography>
                     </Typography>
@@ -618,58 +627,84 @@ const BrastempExperience: NextPage = () => {
                 </Grid>
               </Grid>
               <Box my={6}>
-                <Paper
-                  elevation={0}
-                  sx={{
-                    borderRadius: 0,
-                    pt: 3,
-                    pb: 1,
-                    px: 1,
-                    textAlign: 'center',
-                  }}
-                >
-                  <Box display="flex" alignItems="flex-end" justifyContent="space-around">
-                    <Box component="figure">
-                      <Box
-                        component="img"
-                        src="/images/projects/brastemp-experience/heuristic-radar.png"
-                        alt="Heuristic analysis"
-                        sx={{
-                          width: '100%',
-                          maxWidth: 376,
-                          height: 'auto',
-                          maxHeight: 256,
-                          mb: 1,
-                        }}
-                      />
-                      <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                        {`Heuristic analysis. Participants: Product Designers.`}
+                <h4 className={globalStyles.hidden}>Heuristic data</h4>
+                <Grid container spacing={6}>
+                  <Grid item xs={12} md={6}>
+                    <Stack spacing={2}>
+                      <Typography component="h5" variant="h6" color="text.primary" fontWeight={500}>
+                        {`Analysis reflection`}
                       </Typography>
-                    </Box>
-                    <Box component="figure">
-                      <Box
-                        component="img"
-                        src="/images/projects/brastemp-experience/heuristic-bars.png"
+                      <Paper
+                        elevation={0}
                         sx={{
-                          width: '100%',
-                          maxWidth: 412,
-                          height: 'auto',
-                          maxHeight: 256,
-                          mb: 1,
+                          borderRadius: 0,
+                          pt: 3,
+                          pb: 1,
+                          px: 1,
+                          textAlign: 'center',
                         }}
-                      />
-                      <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
-                        {`Heuristic comparison with other service pages. Participants: Product Designers.`}
+                      >
+                        <Box component="figure">
+                          <Box
+                            component="img"
+                            src="/images/projects/brastemp-experience/heuristic-radar.png"
+                            alt="Heuristic analysis"
+                            sx={{
+                              width: '100%',
+                              maxWidth: 376,
+                              height: 'auto',
+                              maxHeight: 256,
+                              mb: 1,
+                            }}
+                          />
+                          <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
+                            {`Heuristic analysis. Participants: Product Designers.`}
+                          </Typography>
+                        </Box>
+                      </Paper>
+                    </Stack>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Stack spacing={2}>
+                      <Typography component="h5" variant="h6" color="text.primary" fontWeight={500}>
+                        {`Analysis comparision`}
                       </Typography>
-                    </Box>
-                  </Box>
-                </Paper>
+                      <Paper
+                        elevation={0}
+                        sx={{
+                          borderRadius: 0,
+                          pt: 3,
+                          pb: 1,
+                          px: 1,
+                          textAlign: 'center',
+                        }}
+                      >
+                        <Box component="figure">
+                          <Box
+                            component="img"
+                            src="/images/projects/brastemp-experience/heuristic-bars.png"
+                            sx={{
+                              width: '100%',
+                              maxWidth: 412,
+                              height: 'auto',
+                              maxHeight: 256,
+                              mb: 1,
+                            }}
+                          />
+                          <Typography component="figcaption" variant="caption" color="text.secondary" fontWeight={300}>
+                            {`Heuristic comparison with other service pages. Participants: Product Designers.`}
+                          </Typography>
+                        </Box>
+                      </Paper>
+                    </Stack>
+                  </Grid>
+                </Grid>
               </Box>
               <Box component="article" my={6}>
                 <Grid container spacing={6}>
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
-                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                      <Typography component="h3" variant="h5" color="text.primary" fontWeight={500}>
                         {`Brainstorm`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary">
@@ -721,14 +756,14 @@ const BrastempExperience: NextPage = () => {
                 <Grid container spacing={6}>
                   <Grid item xs={12} md={6}>
                     <Stack spacing={2}>
-                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                      <Typography component="h3" variant="h5" color="text.primary" fontWeight={500}>
                         {`Prioritization matrix`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
                         {`After the brainstorming, we got a lot of ideas, and we needed to filter and choose which one should be the best choice. The prioritization matrix assisted us in prioritizing ideas based on technology and business value (the user needs we addressed from the start), and we invested in ideas with low technological effort and high business value.`}
                       </Typography>
                       <Stack spacing={2} pt={1}>
-                        <Typography component="h6" variant="body1" color="text.primary" fontWeight={500}>
+                        <Typography component="h4" variant="body1" color="text.primary" fontWeight={500}>
                           {`Solutions from brainstorming`}
                         </Typography>
                         <Stack component="ol" spacing={1} pl={2.25}>
@@ -778,7 +813,7 @@ const BrastempExperience: NextPage = () => {
                 <Grid container>
                   <Grid item xs={12}>
                     <Stack spacing={2}>
-                      <Typography component="h5" variant="h5" color="text.primary" fontWeight={500}>
+                      <Typography component="h3" variant="h5" color="text.primary" fontWeight={500}>
                         {`Ideation`}
                       </Typography>
                       <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -790,7 +825,7 @@ const BrastempExperience: NextPage = () => {
               </Box>
               <Box my={6}>
                 <Box mb={2}>
-                  <Typography component="h6" variant="body1" color="text.primary" fontWeight={500}>
+                  <Typography component="h4" variant="body1" color="text.primary" fontWeight={500}>
                     {`1. Offer the types of service on the page (installation, conversion and repair)`}
                   </Typography>
                 </Box>
@@ -826,7 +861,7 @@ const BrastempExperience: NextPage = () => {
               </Box>
               <Box my={6}>
                 <Box mb={2}>
-                  <Typography component="h6" variant="body1" color="text.primary" fontWeight={500}>
+                  <Typography component="h4" variant="body1" color="text.primary" fontWeight={500}>
                     {`2. Map improvements (color contrast and information)`}
                   </Typography>
                 </Box>
@@ -865,7 +900,7 @@ const BrastempExperience: NextPage = () => {
               <Grid container spacing={6}>
                 <Grid item xs={12} md={6}>
                   <Stack spacing={2}>
-                    <Typography component="h4" variant="h4" color="primary" fontWeight={600}>
+                    <Typography component="h2" variant="h4" color="primary" fontWeight={600}>
                       {`Results and learnings`}
                     </Typography>
                     <Typography component="p" variant="body1" color="text.secondary" fontWeight={300}>
@@ -874,6 +909,7 @@ const BrastempExperience: NextPage = () => {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} md={6}>
+                  <h3 className={globalStyles.hidden}>Highlights</h3>
                   <Paper
                     elevation={0}
                     sx={{
