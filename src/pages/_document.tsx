@@ -7,7 +7,7 @@ function Document() {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content={`A portfolio containing Victoria's work as a Designer. Victoria Morais Santos is a Designer with UX/UI and Accessibility skills with focus on delivering the best solutions for business and user needs. She is currently working at Tangível and living in Porto, Portugal.`}
+          content={`A portfolio containing Victoria's work as a Designer. Victoria Morais Santos is a Designer with UX/UI and Accessibility skills with focus on delivering the best solutions for business and user needs. She is currently working at Hyphen and living in Porto, Portugal.`}
         />
         <meta
           name="keywords"

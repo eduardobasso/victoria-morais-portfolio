@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Grid, Stack, Typography } from '@mui/material';
+import { Avatar, Box, Container, Grid, Link, Stack, Typography } from '@mui/material';
 import globalStyles from '../styles/global.module.css';
 import { Books, Hearts, ILoveYouHandSign, Muscle } from './custom-emojis';
 
@@ -30,10 +30,14 @@ function ProfileSection() {
               </Stack>
               <Stack flexGrow={1} spacing={3}>
                 <Typography variant="body1" fontWeight={300} mb={2}>
-                  {`I'm a designer based in Portugal who started working with technology as a Developer and through this 8 years of experience I've learned about User Experience, Usability and Accessibility.`}
+                  {`I'm a designer based in Portugal who started working with technology as a Developer and through almost 10 years of experience I've learned about User Experience, Usability and Accessibility.`}
                 </Typography>
                 <Typography variant="body1" fontWeight={300} mb={3}>
-                  {`I'm currently working at Tangível allocated at `}
+                  {`I'm currently working at `}
+                  <Link href="https://www.hyphenteam.com/" target="_blank" color="inherit">
+                    {`Hyphen`}
+                  </Link>
+                  {` allocated at `}
                   <abbr title="Agência para Reforma Tecnológica do Estado" lang="pt">
                     {`ARTE`}
                   </abbr>

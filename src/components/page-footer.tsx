@@ -1,20 +1,19 @@
-import { Link, Toolbar, Typography } from '@mui/material';
+import { Container, Link, Toolbar, Typography } from '@mui/material';
 
 function PageFooter() {
   return (
     <Toolbar component="footer">
-      <Typography component="p" variant="caption" width="100%" textAlign="center">
-        <span>{`Made by `}</span>
-        <Link href="https://github.com/vicmsa" target="_blank">
-          {`Victoria Morais`}
-        </Link>
-        <span>{` (design and acessibility) and `}</span>
-        <Link href="https://github.com/eduardobasso" target="_blank">
-          {`Eduardo Basso`}
-        </Link>
-        <span>{` (development) - `}</span>
-        <Link href="/accessibility-statement">{`Accessibility Statement`}</Link>
-      </Typography>
+      <Container>
+        <Typography
+          component="div"
+          variant="caption"
+          width="100%"
+          sx={{ display: 'flex', justifyContent: 'center', gap: 1.25 }}
+        >
+          <span>{`© 2022-2026 Designed by Victoria Morais. All rights reserved.`}</span>
+          <Link href="/accessibility-statement">{`Accessibility Statement`}</Link>
+        </Typography>
+      </Container>
     </Toolbar>
   );
 }
